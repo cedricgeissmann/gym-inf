@@ -1,14 +1,14 @@
 ALL-MDS = $(wildcard *.md)
 ALL-HTMLS = $(ALL-MDS:%.md=%.html)
 
-all: $(ALL-HTMLS) doc/main.css
+all: $(ALL-HTMLS) docs/main.css
 
 $(ALL-HTMLS): %.html: %.md
-	pandoc -s $< -c main.css -o doc/$@
+	pandoc -s $< -c main.css -o docs/$@
 
-doc/main.css: main.css
-	cp main.css doc/main.css
+docs/main.css: main.css
+	cp main.css docs/main.css
 
 clean:
-	rm doc/*.html
-	rm doc/*.css
+	rm docs/*.html
+	rm docs/*.css
