@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Einführung in Javascript</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Einführung in Javascript</h1>
+</header>
+<p>Bis jetzt haben Sie gelernt wie man eine Webseite mit <strong>HTML</strong> strukturieren kann und Sie haben gesehen wie man eine Webseite mit <strong>CSS</strong> gestalten kann. Mit diesen beiden Elementen sind Webseiten aber noch immer statisch, heisst die können damit nicht richtig interagieren. Sie können auf einen Link klicken um auf die nächste Seite zu kommen, mehr ist aber zur Zeit noch nicht möglich.</p>
+<p>Mit <strong>Javascript</strong> können Sie Interaktivität und Logik zu Ihrer Webseite hinzufügen.</p>
+<section id="beispiel" class="example">
+<h3>Beispiel</h3>
+<p>Ein einfaches Beispiel von etwas was Sie in jeder Programmiersprache machen möchten, ist eine Ausgabe an den Benutzer zu machen. Die einfachste Form dies in <strong>Javascript</strong> zu machen, ist indem Sie diesen Codeblock ans Ende Ihrer <strong>HTML</strong>-Datei anhängen, gleich bevor das <code>&lt;body&gt;</code>-tag geschlossen wird.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">alert</span>(<span class="st">&quot;Hello World!&quot;</span>)<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<p>Mit diesem Code sagen Sie dem Browser das er die Funktion <code>alert()</code> mit dem Argument <code>"Hello World!"</code> ausführen soll. Das Resultat ist das Sie ein Popup-Fenster mit der Nachricht <code>"Hello World!"</code> bekommen.</p>
+</section>
+<p>Mit diesen Popup-Fenstern zu arbeiten ist jedoch mühsam, deshalb gibt es die Möglichkeit die Ausgabe auf eine <em>Konsole</em> zu schreiben. Diese ist normalerweise für den Benutzer auch nicht sichtbar, Entwickler haben jedoch die Möglichkeit damit zu arbeiten.</p>
+<section id="beispiel-1" class="example">
+<h3>Beispiel</h3>
+<p>Überschreiben Sie das <code>&lt;script&gt;</code>-tag mit dem Codeblock von hier und führen die Webseite nochmals aus.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Hello World!&quot;</span>)<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<p>Sie sollten nun die Ausgabe <code>"Hello World!"</code> in dem <em>Konsolen</em>fenster unter Ihrer Webseite sehen.</p>
+</section>
+<h2 id="javascript-in-eigene-datei-auslagern">Javascript in eigene Datei auslagern</h2>
+<p>Wie bereits bei <strong>CSS</strong> möchten Sie auch Ihr <strong>Javascript</strong> möglichst getrennt vom Rest haben. Deshalb gibt es auch hier wieder die Möglichkeit den Code in eine eigene Datei auszulagern.</p>
+<section id="aufgabe" class="exercise">
+<h3>Aufgabe</h3>
+<p>Erstellen Sie eine neue Datei <code>script.js</code>. Und fügen Sie den folgenden Inhalt ein.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Hello World!!&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<p>Damit die Webseite Ihr Skript auch ausführen kann, müssen Sie dieses noch laden. Dazu können Sie Ihr <code>&lt;script&gt;</code>-tag mit dem folgenden Code überschreiben.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;script.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span></code></pre></div>
+</section>
+<h2 id="elemente-auswählen">Elemente auswählen</h2>
+<p>Nur Text auf die <em>Konsole</em> zu schreiben ist ja nicht so spannend. Mehr Interaktivität bekommen Sie wenn Elemente die auf Ihrer Webseite sind auswählen können, und diese manipulieren.</p>
+<section id="beispiel-2" class="example">
+<h3>Beispiel</h3>
+<p>Lesen Sie das erste <code>&lt;h1&gt;</code>-ta auf Ihrer Webseite aus und schreiben Sie den Inhalt auf die <em>Konsole</em>. Das können Sie mit dem folgenden Code erreichen.</p>
+<pre><code>var titleText = document.querySelector(&quot;h1&quot;).innerHTML;
+console.log(titleText);</code></pre>
+</section>
+<h2 id="einstieg-ins-programmieren">Einstieg ins Programmieren</h2>
+<p>Hier machen Sie schon sehr viel was mit Programmieren zu tun hat und es ist wichtig das Sie verstehen was hier passiert.</p>
+<ul>
+<li>Sie erstellen eine neue Variable mit dem Namen <code>titleText</code>.</li>
+<li>Sie wählen den Inhalt des ersten <code>&lt;h1&gt;</code>-tags auf der Webseite aus.</li>
+<li>Sie speichern diesen Inhalt in der Variable <code>titleText</code></li>
+<li>Sie geben den Wert den Sie in der Variable <code>titleText</code> gespeichert haben auf die <em>Konsole</em> aus.</li>
+</ul>
+<section id="aufgabe-1" class="exercise">
+<h3>Aufgabe</h3>
+<p>Hier ist ganz schön viel passiert. Diskutieren Sie mit Ihrem Sitznachbarn was jeder von diesen Schritten genau bedeutet.</p>
+<p>Ändern Sie den Code ab um damit herum zu spielen (Sie könnten zum Beispiel das erste <code>&lt;p&gt;</code>-tag auf Ihrer Webseite suchen, und den Inhalt von diesem ausgeben).</p>
+</section>
+<h2 id="inhalt-von-elementen-ändern">Inhalt von Elementen ändern</h2>
+<p>Können den Inhalt von Elementen nicht nur auslesen, sondern auch setzen. Das bedeutet Sie können den Inhalt der Seite ändern nachdem Sie die Seite bereits erstellt haben.</p>
+<section id="beispiel-3" class="example">
+<h3>Beispiel</h3>
+<p>Sie möchten den Inhalt von Ihrem ersten Titel auf <code>Hello World!</code> setzen. Das können Sie mit dem folgenden Code erreichen.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;h1&quot;</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">&quot;Hello World!&quot;</span><span class="op">;</span></span></code></pre></div>
+</section>
+<h2 id="funktionen">Funktionen</h2>
+<p><strong>Javascript</strong> basiert auf <strong>Funktionen</strong>. Sie können sich <strong>Funktionen</strong> als ein Stück Code vorstellen das ausgeführt wird man es aufgerufen wird. Sie können also einen Teil Ihres Programms in einem Codeblock speichern, den Sie später wieder verwenden können. Das praktische daran ist vor allem dass Sie diesen Code auch mehrfach verwenden können, ohne diesen immer neu zu schreiben.</p>
+<section id="beispiel-4" class="example">
+<h3>Beispiel</h3>
+<p>Der folgende Block von Code gibt Ihnen eine Funktion mit dem Namen <code>test</code> die danach direkt aufgerufen wird.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">test</span>() {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> titleText <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;h1&quot;</span>)<span class="op">.</span><span class="at">innerHTML</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(titleText)<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>()<span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>()<span class="op">;</span></span></code></pre></div>
+<p>Sie sollten nun den Inhalt von Ihrem Titel 2mal in der <em>Konsole</em> sehen.</p>
+</section>
+<h2 id="ausführen-auf-befehl">Ausführen auf Befehl</h2>
+<p>Um richtig mit einer Webseite zu interagieren, möchten Sie Code erst ausführen wenn der Benutzer etwas macht, wie ein Element anzuklicken. Fügen Sie dazu den folgenden Code in Ihre Webseite ein. Am besten fügen Sie den <strong>HTML</strong>-Code direkt unter Ihrem ersten <code>&lt;h1&gt;</code>-tag ein.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;button</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">&quot;test()&quot;</span><span class="kw">&gt;</span>Test<span class="kw">&lt;/button&gt;</span></span></code></pre></div>
+<p>Überschreiben Sie ausserdem den Inhalt von <code>script.js</code> mit dem folgenden Code.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">test</span>() {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;h1&quot;</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">&quot;Titel wurde angeklick!&quot;</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Wenn Sie nun auf den Button klicken, sehen Sie das sich der Titel ändert. :::</p>
+<section id="beispiel-zähler-erstellen" class="example">
+<h3>Beispiel: Zähler erstellen</h3>
+<p>Sie können auch einen einfachen Zähler erstellen. Mit dem folgenden Code können Sie einen Zähler auf Ihrer Webseite erstellen.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> counter <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">increaseCounter</span>() {</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> elem <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;#counter&quot;</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> counter<span class="op">;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Damit Sie die Funktion auch verwenden können, brauchen Sie zusätzlich noch diesen HTML Code.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;span</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;counter&quot;</span><span class="kw">&gt;</span>0<span class="kw">&lt;/span&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;button</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">&quot;increaseCounter()&quot;</span><span class="kw">&gt;</span>+1<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+</section>
+<p>Generell schreiben Sie also Code in Funktionen und diese Funktionen können Sie dann über das <code>onclick</code>-Attribut von Buttons (oder auch anderen Elementen) ausführen lassen.</p>
+<section id="aufgabe-2" class="exercise">
+<h3>Aufgabe</h3>
+<p>Erstellen Sie eine Funktion <code>decreaseCounter()</code> und einen Button der diese Funktion aufruft. Die Funktion soll den Zähler um eines vermindern.</p>
+</section>
+<h3 id="scoping">Scoping</h3>
+<p>In Javascript sind Variablen und Funktionen in eigene Umgebungen abgetrennt (Scoping). Die Variable <code>counter</code> aus dem Beispiel von oben, ist im globalen Scope. Das bedeutet sie ist überall verfügbar. Die Variable <code>elem</code> aus der Funktion <code>increaseCounter</code> ist nur innerhalb von dieser Funktion verfügbar, sie kann in anderen Funktionen also nicht verwendet werden.</p>
+<p>Wenn man eine Variable nun an eine andere Funktion übergeben muss, kann man dies mit Funktionsparametern (Argumenten) machen.</p>
+<section id="beispiel-5" class="example">
+<h3>Beispiel</h3>
+<p>Sie haben 2 Funktionen gegeben. Von der ersten Funktion möchten Sie die zweite aufrufen und den Wert der Variable <code>value</code> in der zweiten Funktion verwenden. Das Können Sie mit folgendem Code ganz einfach erreichen.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">first</span>() {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> value <span class="op">=</span> <span class="dv">17</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Der Wert von value in der Funktion &#39;first&#39; ist </span><span class="sc">${</span>value<span class="sc">}</span><span class="vs">.`</span>)<span class="op">;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">second</span>(value)<span class="op">;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">second</span>(val) {</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Der Wert von value in der Funktion &#39;second&#39; ist </span><span class="sc">${</span>val<span class="sc">}</span><span class="vs">.`</span>)<span class="op">;</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">first</span>()</span></code></pre></div>
+</section>
+<h2 id="parameter">Parameter</h2>
+<p>Parameter oder oft auch Argumente genannt, können als Variablen verstanden werden, die einer Funktion übergeben werden. Sie müssen im Kopf der Funktion definiert werden, damit klar ist welches die Parameter sind. Beim aufrufen der Funktion werden Sie dann in den Klammern an die Funktion übergeben. Wenn mehrere Parameter verwendet werden, werden diese einfach mir Kommas getrennt.</p>
+<section id="aufgabe-3" class="exercise">
+<h3>Aufgabe</h3>
+<p>Schreiben Sie eine Funktion die 3 Parameter hat, und rufen Sie diese Funktion auf.</p>
+</section>
+<h2 id="arbeiten-mit-funktionen">Arbeiten mit Funktionen</h2>
+<p>Wie Sie bereits wissen läuft in Javascript alles über Funktionen. Das bedeutet Sie sollten auch in Funktionen denken wenn Sie Ihren Code erstellen. Funktionen kapseln einen kleinen Teil Ihrer Logik in ein Programm und können immer wieder verwendet werden. Mit Parametern können sich Funktionen auch anders verhalten und Parameter können von Funktion zu Funktion weitergegeben werden. Daher ist es wichtig das Sie Ihren Code in möglichst kleine Stücke unterteilen und wenn immer möglich Parameter verwenden. Zusätzlich haben Sie den Code dann auch gerade dokumentiert, denn mit den Funktionsnamen können Sie immer gleich beschreiben was in der Funktion passiert.</p>
+<section id="aufgabe-4" class="exercise">
+<h3>Aufgabe</h3>
+<p>Schreiben Sie den Counter den Sie oben erstellt haben so um, das keine globale Variable mehr verwendet wird. Fügen Sie ausserdem eine Funktion und einen Button hinzu, welche den Counter auf 0 setzen.</p>
+<p><strong>Tipp:</strong> Mit der Funktion <code>parseInt(arg)</code> können Sie das <code>innerHTML</code> von einem Element als <code>arg</code> übergeben. Wenn es eine Zahl ist, bekommen Sie eine Zahl zurück.</p>
+</section>
+<h2 id="listen">Listen</h2>
+<p>Bisher haben wir immer nur das erste Element ausgelesen das einem <code>querySelector</code> entspricht. Was ist aber wenn wir mehrere Elemente haben möchten? Wir können dann die Funktion <code>document.querySelectorAll()</code> verwenden, und bekommen eine Liste zurück.</p>
+<div class="example">
+<p>Wenn wir wissen möchten wieviele <code>&lt;p&gt;</code>-Tags auf unserer Seite sind, können wir das mit dem Code unten erreichen.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">countElements</span>(selector) {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> elements <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(selector)<span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Es gibt </span><span class="sc">${</span>elements<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> Elemente für den Selektor &#39;</span><span class="sc">${</span>selector<span class="sc">}</span><span class="vs">&#39;`</span>)<span class="op">;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">countElements</span>(<span class="st">&quot;p&quot;</span>)<span class="op">;</span></span></code></pre></div>
+</div>
+<p>Die Länge einer Liste, wieviele Elemente sie enthält, können Sie mit <code>.length</code> bestimmen. Das kann sehr praktisch sein wenn Sie bis zum Ende einer Liste zählen möchten.</p>
+<h2 id="schleifen">Schleifen</h2>
+<p>Wenn Sie über alle Elemente einer Liste iterieren möchten, können Sie dies mit Schleifen machen. Sie können generell auch Schleifen zum zählen verwenden, meist werden Sie aber für Listen gebraucht.</p>
+<section id="beispiel-6" class="example">
+<h3>Beispiel</h3>
+<p>Sie möchten den Inhalt von allen <code>&lt;h2&gt;</code>-tags auf Ihrer Seite auf die Kommandozeile schreiben.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">printElements</span>(selector) {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> elements <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(selector)<span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Es gibt </span><span class="sc">${</span>elements<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> Elemente für den Selektor &#39;</span><span class="sc">${</span>selector<span class="sc">}</span><span class="vs">&#39;`</span>)<span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span>( <span class="kw">var</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> elements<span class="op">.</span><span class="at">length</span><span class="op">;</span> i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> ) {</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> elem <span class="op">=</span> elements[i]<span class="op">;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(elem<span class="op">.</span><span class="at">innerHTML</span>)<span class="op">;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">printElements</span>(<span class="st">&quot;h2&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<p>Mit der <code>for</code>-Schlaufe können Sie die Variable <code>i</code> von <code>0</code> bis zur Länge der Liste zählen, dabei wird in jedem Durchlauf das <code>i</code> um <code>1</code> erhöht.</p>
+<p>Mit <code>elements[i]</code> sagen Sie das Sie den Eintrag an der Stelle <code>i</code> in der Liste haben möchten.</p>
+</section>
+<section id="aufgabe-5" class="exercise">
+<h3>Aufgabe</h3>
+<p>Schreiben Sie eine Funktion die all Ihre <code>&lt;p&gt;</code>-tags zu <code>&lt;div class="paragraph"&gt;</code>-tags umwandelt.</p>
+<p><strong>Tipp:</strong> Lassen Sie sich <code>.outerHTML</code> von all Ihren <code>&lt;p&gt;</code>-tags anzeigen.</p>
+</section>
+<h2 id="einfaches-spiel-mit-webseiten">Einfaches Spiel mit Webseiten</h2>
+<p>Sie können mit Webseiten und vor allem mit <strong>Javascript</strong> einige Spieltypen ganz einfach entwickeln. Beispielsweise ein rundenbasiertes Kampfsystem muss nur die Werte vom Spieler und Gegner anzeigen können und ein paar Buttons für die Spieleraktionen haben. Das können Sie ganz einfach als Webseite schreiben. Wenn Sie dann noch ein wenig <strong>CSS</strong> verwenden, kann Ihr Spiel sogar noch gut aussehen.</p>
+<section id="aufgabe-6" class="exercise">
+<h3>Aufgabe</h3>
+<p>Schreiben Sie ein Spiel als rundenbasiertes Kampfsystem.</p>
+<ul>
+<li>Es gibt einen Gegner und einen Spieler</li>
+<li>Der Gegner greift jede Runde an</li>
+<li>Der Spieler kann sich heilen oder angreifen</li>
+<li>Das Spiel ist nach 10 Runden vorbei, ist der Gegner nicht besiegt, hat der Spieler verloren.</li>
+</ul>
+<p><strong>Tipp:</strong> Mit dem folgenden Code bekommen Sie eine Zufallszahl.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">getRandomInt</span>(min<span class="op">,</span> max) {</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> (max <span class="op">-</span> min <span class="op">+</span> <span class="dv">1</span>) ) <span class="op">+</span> min<span class="op">;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>rand <span class="op">=</span> <span class="fu">getRandomInt</span>(<span class="dv">20</span><span class="op">,</span> <span class="dv">32</span>)<span class="op">;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(rand)<span class="op">;</span></span></code></pre></div>
+</section>
+</body>
+</html>
