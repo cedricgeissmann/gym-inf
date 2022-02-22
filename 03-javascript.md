@@ -191,7 +191,8 @@ var counter = 0;
 
 function increaseCounter() {
     counter = counter + 1;
-    var elem = document.querySelector("#counter").innerHTML = counter;
+    var elem = document.querySelector("#counter");
+    elem.innerHTML = counter;
 }
 ```
 
