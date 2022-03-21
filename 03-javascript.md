@@ -87,7 +87,7 @@ können, und diese manipulieren.
 Lesen Sie das erste `<h1>`-ta auf Ihrer Webseite aus und schreiben Sie den
 Inhalt auf die *Konsole*. Das können Sie mit dem folgenden Code erreichen.
 
-```
+```javascript
 var titleText = document.querySelector("h1").innerHTML;
 console.log(titleText);
 ```
