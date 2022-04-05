@@ -6,3 +6,4 @@ title: Informatik
 1. [CSS](02-CSS.html)
 1. [Javascript](03-javascript.html)
 1. [Farming Game](04-farm-game.html)
+1. [Farming Game v2.0](05-farm-game-refinement.html)
