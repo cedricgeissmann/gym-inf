@@ -86,16 +86,59 @@
 <header id="title-block-header">
 <h1 class="title">Eigene Webseite mit HTML</h1>
 </header>
-<p>Webseiten werden mit <strong>HTML</strong> geschrieben. <strong>HTML</strong> (<strong>H</strong>yper-<strong>T</strong>ext-<strong>M</strong>arkup-<strong>L</strong>anguage) ist eine Sprache, die es erlaubt die Struktur einer Webseite und deren Inhalt zu beschreiben. <strong>HTML</strong> basiert auf sogenannten <strong>Tags</strong>, welche den Inhalt einschliessen und beschreiben von welcher Art dieser Inhalt ist.</p>
+<p>Webseiten werden mit <strong>HTML</strong> geschrieben.
+<strong>HTML</strong>
+(<strong>H</strong>yper-<strong>T</strong>ext-<strong>M</strong>arkup-<strong>L</strong>anguage)
+ist eine Sprache, die es erlaubt die Struktur einer Webseite und deren
+Inhalt zu beschreiben. <strong>HTML</strong> basiert auf sogenannten
+<strong>Tags</strong>, welche den Inhalt einschliessen und beschreiben
+von welcher Art dieser Inhalt ist.</p>
 <p><strong>Beispiel:</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1&gt;</span>Dies ist ein Title<span class="kw">&lt;/h1&gt;</span></span></code></pre></div>
-<p>In diesem Stück Code wird beschrieben dass hier ein Titel kommen soll. Der Inhalt des Titels ist <code>Das ist ein Title</code>. Die Elemente <code>&lt;h1&gt;</code> und <code>&lt;/h1&gt;</code> nennt man <strong>Tags</strong>. Jeder Inhalt einer Webseite muss in diesen <strong>Tags</strong> stehen, damit die Webseite richtig angezeigt werden kann. <strong>Tags</strong> bestehen immer aus einem öffnenden <strong>Tag</strong> (<code>&lt;h1&gt;</code>) und einem schliessenden <strong>Tag</strong> (<code>&lt;/h1&gt;</code>). Dabei heissen die <strong>Tags</strong> immer gleich und das schliessende hat zusätzlich noch einen <code>/</code>. Das ist mehr oder weniger alles was Sie über die Funktionsweise von <strong>HTML</strong> wissen müssen.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1&gt;</span>Dies ist ein Title<span class="kw">&lt;/h1&gt;</span></span></code></pre></div>
+<p>In diesem Stück Code wird beschrieben dass hier ein Titel kommen
+soll. Der Inhalt des Titels ist <code>Das ist ein Title</code>. Die
+Elemente <code>&lt;h1&gt;</code> und <code>&lt;/h1&gt;</code> nennt man
+<strong>Tags</strong>. Jeder Inhalt einer Webseite muss in diesen
+<strong>Tags</strong> stehen, damit die Webseite richtig angezeigt
+werden kann. <strong>Tags</strong> bestehen immer aus einem öffnenden
+<strong>Tag</strong> (<code>&lt;h1&gt;</code>) und einem schliessenden
+<strong>Tag</strong> (<code>&lt;/h1&gt;</code>). Dabei heissen die
+<strong>Tags</strong> immer gleich und das schliessende hat zusätzlich
+noch einen <code>/</code>. Das ist mehr oder weniger alles was Sie über
+die Funktionsweise von <strong>HTML</strong> wissen müssen.</p>
 <h2 id="aufrufen-einer-webseite">Aufrufen einer Webseite</h2>
-<p>Wenn Sie im Internet eine Webseite besuchen, dann stellen Sie eine Anfrage an einen Webserver. Dieser Webserver generiert ein <strong>HTML</strong>-Dokument für Sie und dieses wird dann über das Internet an Ihren Computer gesendet. Sie erhalten also Ihre Webseite als Text von einem Webserver. Damit das ganze für Sie als Besucher der Webseite dann auch übersichtlich ist, stellt der Webbrowser die Webseite für Sie dar. Dazu sagt man das der Webbrowser ein <strong>HTML</strong>-Dokument <em>rendert</em>.</p>
-<p>Beim <em>rendern</em> liest der Webbrowser das <strong>HTML</strong> und erstellt dabei ein <strong>D</strong>ocument-<strong>O</strong>bject-<strong>M</strong>odel (kurz <strong>DOM</strong>). Bei anderen Dokumentformaten (z.B. Word) funktioniert dies sehr ähnlich, nur das Sie in diesen Formaten das Endresultat bereits sehen. Das scheint oftmals praktisch zu sein, kann aber auch zu Problemen führen, denn bei diesen Formaten müssen Sie nicht beschreiben was Sie machen möchten, sondern passen einfach das aussehen an. Das führt dazu das gewisse Änderungen Ihr ganzes Dokument durcheinander bringen können. Wenn Sie sauberes <strong>HTML</strong> schreiben, sollte Ihnen das nicht passieren. Dazu müssen Sie aufpassen das immer alle <strong>Tags</strong> geschlossen sind, das ist der häufigste Fehler. Es mag zu Beginn ein wenig gewöhnungsbedürftig sein alles in Code zu schreiben, aber wenn Sie sich angewöhnen alles immer sauber auszurichten, werden Sie <strong>HTML</strong> wie ganz normalen Text lesen, ohne die Hilfe des Browsers zu brauchen.</p>
+<p>Wenn Sie im Internet eine Webseite besuchen, dann stellen Sie eine
+Anfrage an einen Webserver. Dieser Webserver generiert ein
+<strong>HTML</strong>-Dokument für Sie und dieses wird dann über das
+Internet an Ihren Computer gesendet. Sie erhalten also Ihre Webseite als
+Text von einem Webserver. Damit das ganze für Sie als Besucher der
+Webseite dann auch übersichtlich ist, stellt der Webbrowser die Webseite
+für Sie dar. Dazu sagt man das der Webbrowser ein
+<strong>HTML</strong>-Dokument <em>rendert</em>.</p>
+<p>Beim <em>rendern</em> liest der Webbrowser das <strong>HTML</strong>
+und erstellt dabei ein
+<strong>D</strong>ocument-<strong>O</strong>bject-<strong>M</strong>odel
+(kurz <strong>DOM</strong>). Bei anderen Dokumentformaten (z.B. Word)
+funktioniert dies sehr ähnlich, nur das Sie in diesen Formaten das
+Endresultat bereits sehen. Das scheint oftmals praktisch zu sein, kann
+aber auch zu Problemen führen, denn bei diesen Formaten müssen Sie nicht
+beschreiben was Sie machen möchten, sondern passen einfach das aussehen
+an. Das führt dazu das gewisse Änderungen Ihr ganzes Dokument
+durcheinander bringen können. Wenn Sie sauberes <strong>HTML</strong>
+schreiben, sollte Ihnen das nicht passieren. Dazu müssen Sie aufpassen
+das immer alle <strong>Tags</strong> geschlossen sind, das ist der
+häufigste Fehler. Es mag zu Beginn ein wenig gewöhnungsbedürftig sein
+alles in Code zu schreiben, aber wenn Sie sich angewöhnen alles immer
+sauber auszurichten, werden Sie <strong>HTML</strong> wie ganz normalen
+Text lesen, ohne die Hilfe des Browsers zu brauchen.</p>
 <h2 id="html-dokument">HTML Dokument</h2>
-<p>Was Sie oben gesehen haben, ist nur ein Ausschnitt aus einem <strong>HTML</strong>-Dokument. Ein vollständiges <strong>HTML</strong>-Dokument hat noch mehr Teile. Hier ist eine Vorlage für ein komplettes Dokument:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<p>Was Sie oben gesehen haben, ist nur ein Ausschnitt aus einem
+<strong>HTML</strong>-Dokument. Ein vollständiges
+<strong>HTML</strong>-Dokument hat noch mehr Teile. Hier ist eine
+Vorlage für ein komplettes Dokument:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;head&gt;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;meta</span> <span class="er">charset</span><span class="ot">=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
@@ -107,70 +150,160 @@
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h1&gt;</span>HTML Seite<span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/body&gt;</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
-<p>In dem Code hier sehen Sie das ein <strong>HTML</strong>-Dokument immer in 2 Teile aufgeteilt ist. Es gibt den <code>&lt;head&gt;</code>, welcher Metainformationen über die Seite enthält. Hier können Sie zum Beispiel einen Titel angeben. Der Titel einer Webseite ist das was im Webbrowser im Tab sehen können. Der Titel wird normalerweise nicht auf der Seite selbst dargestellt.</p>
-<p>Die restlichen Informationen im <code>&lt;head&gt;</code> sind für Sie nicht weiter interessant, Sie können die einfach kopieren.</p>
-<p>Der Inhalt einer Webseite ist alles was innerhalb von <code>&lt;body&gt;</code> definiert wird. Das ist was Sie am Ende nach dem <em>Rendering</em> sehen. Im Moment sehen Sie nur eine Überschrift und nichts weiteres.</p>
+<p>In dem Code hier sehen Sie das ein <strong>HTML</strong>-Dokument
+immer in 2 Teile aufgeteilt ist. Es gibt den <code>&lt;head&gt;</code>,
+welcher Metainformationen über die Seite enthält. Hier können Sie zum
+Beispiel einen Titel angeben. Der Titel einer Webseite ist das was im
+Webbrowser im Tab sehen können. Der Titel wird normalerweise nicht auf
+der Seite selbst dargestellt.</p>
+<p>Die restlichen Informationen im <code>&lt;head&gt;</code> sind für
+Sie nicht weiter interessant, Sie können die einfach kopieren.</p>
+<p>Der Inhalt einer Webseite ist alles was innerhalb von
+<code>&lt;body&gt;</code> definiert wird. Das ist was Sie am Ende nach
+dem <em>Rendering</em> sehen. Im Moment sehen Sie nur eine Überschrift
+und nichts weiteres.</p>
 <h2 id="eigene-webseite-erstellen">Eigene Webseite erstellen</h2>
-<p>Sie können ganz einfach ein <strong>HTML</strong>-Dokument auf Ihrem Computer erstellen und diesem im Browser öffnen, das können Sie dann aber leider nicht mit anderen Teilen, und genau das ist was Sie mit Webseiten machen möchten. Deshalb verwenden wir den Dienst <a href="https://replit.com">Replit</a>.</p>
+<p>Sie können ganz einfach ein <strong>HTML</strong>-Dokument auf Ihrem
+Computer erstellen und diesem im Browser öffnen, das können Sie dann
+aber leider nicht mit anderen Teilen, und genau das ist was Sie mit
+Webseiten machen möchten. Deshalb verwenden wir den Dienst <a
+href="https://replit.com">Replit</a>.</p>
 <section id="exercise" class="exercise">
 <h3>Exercise</h3>
 <p>Erstellen Sie sich dort einen Account.</p>
 </section>
-<p>Wenn Sie den Account haben, erstellen Sie ein neues <strong>repl</strong> und wählen Sie dort <strong>HTML, CSS, Javascript</strong> als Vorlage aus.</p>
-<p>Wenn Ihr <strong>repl</strong> erstellt wurde, öffnen Sie die Datei <code>index.html</code> und ersetzen Sie deren Inhalt mit dem Code von weiter oben. Drücken Sie auf den <strong>Run</strong>-Button ganz oben auf der Seite und Ihre Webseite ist gestartet. Sie können die Webseite jetzt auch mit anderen teilen, sie ist über die <strong>URL</strong> aufrufbar, die sie oben rechts sehen können. Sie können Ihre Änderungen natürlich auch sehen wenn Sie einfach auf den <strong>Run</strong>-Button drücken.</p>
+<p>Wenn Sie den Account haben, erstellen Sie ein neues
+<strong>repl</strong> und wählen Sie dort <strong>HTML, CSS,
+Javascript</strong> als Vorlage aus.</p>
+<p>Wenn Ihr <strong>repl</strong> erstellt wurde, öffnen Sie die Datei
+<code>index.html</code> und ersetzen Sie deren Inhalt mit dem Code von
+weiter oben. Drücken Sie auf den <strong>Run</strong>-Button ganz oben
+auf der Seite und Ihre Webseite ist gestartet. Sie können die Webseite
+jetzt auch mit anderen teilen, sie ist über die <strong>URL</strong>
+aufrufbar, die sie oben rechts sehen können. Sie können Ihre Änderungen
+natürlich auch sehen wenn Sie einfach auf den
+<strong>Run</strong>-Button drücken.</p>
 <h2 id="eigener-abschnitt">Eigener Abschnitt</h2>
-<p>Sie können einen Abschnitt erzeugen, indem Sie ganz einfach dieses Code-Snippet einfügen:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span>Das ist ein Abschnitt.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
-<p>Das <code>&lt;p&gt;</code>-Tag steht für <strong>P</strong>aragraph und beschreibt somit einen Abschnitt. Bei <strong>HTML</strong> ist es so das Ihr Browser alle unnötigen Leerzeichen und Zeilenumbrüche ignoriert. Wenn Sie also mehrere Abschnitte brauchen, müssen Sie mehrere <code>&lt;p&gt;</code>-Tags verwenden. Das ergibt auch Sinn wenn Sie sich überlegen das Sie mit <strong>HTML</strong> ja den Inhalt einer Webseite und deren Aufbau beschreiben. Damit müssen Sie jedem einzelnen Absatz sagen, das es sich um einen Absatz handelt.</p>
+<p>Sie können einen Abschnitt erzeugen, indem Sie ganz einfach dieses
+Code-Snippet einfügen:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span>Das ist ein Abschnitt.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Das <code>&lt;p&gt;</code>-Tag steht für <strong>P</strong>aragraph
+und beschreibt somit einen Abschnitt. Bei <strong>HTML</strong> ist es
+so das Ihr Browser alle unnötigen Leerzeichen und Zeilenumbrüche
+ignoriert. Wenn Sie also mehrere Abschnitte brauchen, müssen Sie mehrere
+<code>&lt;p&gt;</code>-Tags verwenden. Das ergibt auch Sinn wenn Sie
+sich überlegen das Sie mit <strong>HTML</strong> ja den Inhalt einer
+Webseite und deren Aufbau beschreiben. Damit müssen Sie jedem einzelnen
+Absatz sagen, das es sich um einen Absatz handelt.</p>
 <section id="exercise-1" class="exercise">
 <h3>Exercise</h3>
 <p>Fügen Sie nun noch ein paar Abschnitte hinzu.</p>
 </section>
 <h2 id="weitere-tags">Weitere Tags</h2>
-<p>Es gibt noch viele weitere <strong>Tags</strong> wie nur <code>&lt;p&gt;</code>. Zum Beispiel können Sie mit dem <code>&lt;strong&gt;</code>-Tag, einen Text hervorheben der dann Fettgedruckt erscheint. Mit dem <code>&lt;em&gt;</code>-Tag, können Sie Text kursiv darstellen.</p>
-<p>Eine Liste mit möglichen <strong>Tags</strong> finden Sie hier: <a href="https://quickref.me/html">HTML Cheatsheet</a></p>
-<p>Es ist normalerweise nicht nötig das Sie alle möglichen <strong>Tags</strong> auswendig können. Sie müssen einige wenige <strong>Tags</strong> kennen die Sie häufig brauchen, und für alles andere, müssen Sie wissen wo Sie diese finden. Das <a href="https://quickref.me/html">HTML Cheatsheet</a> ist eine gute Referent dafür. Eine weitere gute Referenz ist <a href="https://www.w3schools.com/tags/ref_byfunc.asp">w3schools</a>.</p>
+<p>Es gibt noch viele weitere <strong>Tags</strong> wie nur
+<code>&lt;p&gt;</code>. Zum Beispiel können Sie mit dem
+<code>&lt;strong&gt;</code>-Tag, einen Text hervorheben der dann
+Fettgedruckt erscheint. Mit dem <code>&lt;em&gt;</code>-Tag, können Sie
+Text kursiv darstellen.</p>
+<p>Eine Liste mit möglichen <strong>Tags</strong> finden Sie hier: <a
+href="https://quickref.me/html">HTML Cheatsheet</a></p>
+<p>Es ist normalerweise nicht nötig das Sie alle möglichen
+<strong>Tags</strong> auswendig können. Sie müssen einige wenige
+<strong>Tags</strong> kennen die Sie häufig brauchen, und für alles
+andere, müssen Sie wissen wo Sie diese finden. Das <a
+href="https://quickref.me/html">HTML Cheatsheet</a> ist eine gute
+Referent dafür. Eine weitere gute Referenz ist <a
+href="https://www.w3schools.com/tags/ref_byfunc.asp">w3schools</a>.</p>
 <section id="exercise-2" class="exercise">
 <h3>Exercise</h3>
-<p>Lesen Sie durch die Liste und probieren Sie verschiedene <strong>Tags</strong> aus die spannend klingen.</p>
+<p>Lesen Sie durch die Liste und probieren Sie verschiedene
+<strong>Tags</strong> aus die spannend klingen.</p>
 </section>
 <h2 id="links-auf-webseiten">Links auf Webseiten</h2>
-<p>Das Praktische an Webseiten ist das alles miteinander verlinkt werden kann. Sie können ein Stück Text auf Ihrer Webseite erzeugen das Sie direkt auf die Seite bringt über die Sie sprechen, so wie bei den Cheatsheets von oben. Das machen Sie ganz einfach mit <code>&lt;a&gt;</code>-Tags:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://www.w3schools.com/tags/ref_byfunc.asp&quot;</span><span class="kw">&gt;</span>w3schools<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
-<p>Das was innerhalb von dem <strong>Tag</strong> steht, ist der Text der Ihnen angezeigt wird. Das was hinter <code>href</code> steht, ist der Link auf den Sie weitergeleitet werden wenn Sie darauf klicken. <code>&lt;a&gt;</code>-Tags sind ein sehr wichtiger Bestandteil vom Web. Alle Webseiten verwenden Links um auf andere zu zeigen oder auch um auf Unterseiten zu verweisen.</p>
+<p>Das Praktische an Webseiten ist das alles miteinander verlinkt werden
+kann. Sie können ein Stück Text auf Ihrer Webseite erzeugen das Sie
+direkt auf die Seite bringt über die Sie sprechen, so wie bei den
+Cheatsheets von oben. Das machen Sie ganz einfach mit
+<code>&lt;a&gt;</code>-Tags:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://www.w3schools.com/tags/ref_byfunc.asp&quot;</span><span class="kw">&gt;</span>w3schools<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
+<p>Das was innerhalb von dem <strong>Tag</strong> steht, ist der Text
+der Ihnen angezeigt wird. Das was hinter <code>href</code> steht, ist
+der Link auf den Sie weitergeleitet werden wenn Sie darauf klicken.
+<code>&lt;a&gt;</code>-Tags sind ein sehr wichtiger Bestandteil vom Web.
+Alle Webseiten verwenden Links um auf andere zu zeigen oder auch um auf
+Unterseiten zu verweisen.</p>
 <h2 id="listen">Listen</h2>
-<p>Ein anderes Element das auf Webseiten häufig verwendet wird, sind Listen. Diese funktionieren sehr einfach. Sie sagen dem Browser das jetzt eine Liste folgt, und dann zählen Sie die einzelnen Elemente der Liste auf:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;ul&gt;</span></span>
+<p>Ein anderes Element das auf Webseiten häufig verwendet wird, sind
+Listen. Diese funktionieren sehr einfach. Sie sagen dem Browser das
+jetzt eine Liste folgt, und dann zählen Sie die einzelnen Elemente der
+Liste auf:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;ul&gt;</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;li&gt;</span>Item 1<span class="kw">&lt;/li&gt;</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;li&gt;</span>Item 2<span class="kw">&lt;/li&gt;</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/ul&gt;</span></span></code></pre></div>
-<p>In dem Beispiel oben ist das <code>&lt;ul&gt;</code>-Tag, das Tag für eine unsortierte Liste (<code>&lt;ol&gt;</code> könnte für nummerierte Listen verwendet werden). Und mit dem <code>&lt;li&gt;</code>-Tag, sprechen Sie einzelne Einträge in der Liste an (<strong>l</strong>ist <strong>i</strong>tems).</p>
+<p>In dem Beispiel oben ist das <code>&lt;ul&gt;</code>-Tag, das Tag für
+eine unsortierte Liste (<code>&lt;ol&gt;</code> könnte für nummerierte
+Listen verwendet werden). Und mit dem <code>&lt;li&gt;</code>-Tag,
+sprechen Sie einzelne Einträge in der Liste an (<strong>l</strong>ist
+<strong>i</strong>tems).</p>
 <section id="exercise-3" class="exercise">
 <h3>Exercise</h3>
-<p>Erstellen Sie nun eine Liste von Links zu Ihren häufig verwendeten Webseiten.</p>
+<p>Erstellen Sie nun eine Liste von Links zu Ihren häufig verwendeten
+Webseiten.</p>
 </section>
 <h2 id="bilder">Bilder</h2>
-<p>Bilder sind sehr wichtig für Webseiten. Der Webbrowser kann alle Bildformate einfach darstellen. Sie müssen nur ein <code>&lt;img&gt;</code>-Tag verwenden:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://gym-muttenz.ch/fileadmin/user_upload/_headerbilder/3.jpg&quot;</span> <span class="er">alt</span><span class="ot">=</span><span class="st">&quot;Bild vom Gymnasium Muttenz&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
-<p>Sie sehen das <code>&lt;img&gt;</code>-Tag hat 2 Attribute (<code>src</code> und <code>alt</code>). Das Attribut <code>src</code> gibt eine <strong>URL</strong> zu dem Bild an das Sie anzeigen möchten. Ist dies ein Bild das im Internet verfügbar ist, können Sie das so angeben wie oben. Ist das Bild lokal (auf Ihrem <strong>repl</strong> verfügbar) können Sie einfach den Namen des Bildes angeben. Das Attribut <code>alt</code> ist eine Beschreibung des Bildes. Es hilft einer Suchmaschine beim auffinden von Bildern und falls das Bild nicht geladen werden kann, zeigt der Browser den Text als Ersatz für das Bild an.</p>
-<p>Das <code>&lt;img&gt;</code>-Tag ist eines der wenigen Tags die nicht geschlossen werden. Das liegt daran das nichts in dem Tag angezeigt wird, ausser natürlich dem Bild.</p>
-<p>Die Grösse eines Bildes kann man über die Attribute <code>width</code> und <code>height</code> angeben. Dazu gibt man einfach eine Zahl in Pixel (<code>px</code>) an.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://gym-muttenz.ch/fileadmin/user_upload/_headerbilder/3.jpg&quot;</span> <span class="er">alt</span><span class="ot">=</span><span class="st">&quot;Bild vom Gymnasium Muttenz&quot;</span> <span class="er">width</span><span class="ot">=</span><span class="st">&quot;300px&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<p>Bilder sind sehr wichtig für Webseiten. Der Webbrowser kann alle
+Bildformate einfach darstellen. Sie müssen nur ein
+<code>&lt;img&gt;</code>-Tag verwenden:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://gym-muttenz.ch/fileadmin/user_upload/_headerbilder/3.jpg&quot;</span> <span class="er">alt</span><span class="ot">=</span><span class="st">&quot;Bild vom Gymnasium Muttenz&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<p>Sie sehen das <code>&lt;img&gt;</code>-Tag hat 2 Attribute
+(<code>src</code> und <code>alt</code>). Das Attribut <code>src</code>
+gibt eine <strong>URL</strong> zu dem Bild an das Sie anzeigen möchten.
+Ist dies ein Bild das im Internet verfügbar ist, können Sie das so
+angeben wie oben. Ist das Bild lokal (auf Ihrem <strong>repl</strong>
+verfügbar) können Sie einfach den Namen des Bildes angeben. Das Attribut
+<code>alt</code> ist eine Beschreibung des Bildes. Es hilft einer
+Suchmaschine beim auffinden von Bildern und falls das Bild nicht geladen
+werden kann, zeigt der Browser den Text als Ersatz für das Bild an.</p>
+<p>Das <code>&lt;img&gt;</code>-Tag ist eines der wenigen Tags die nicht
+geschlossen werden. Das liegt daran das nichts in dem Tag angezeigt
+wird, ausser natürlich dem Bild.</p>
+<p>Die Grösse eines Bildes kann man über die Attribute
+<code>width</code> und <code>height</code> angeben. Dazu gibt man
+einfach eine Zahl in Pixel (<code>px</code>) an.</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://gym-muttenz.ch/fileadmin/user_upload/_headerbilder/3.jpg&quot;</span> <span class="er">alt</span><span class="ot">=</span><span class="st">&quot;Bild vom Gymnasium Muttenz&quot;</span> <span class="er">width</span><span class="ot">=</span><span class="st">&quot;300px&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
 <section id="exercise-4" class="exercise">
 <h3>Exercise</h3>
 <p>Fügen Sie einige Bilder zu Ihrer Webseite hinzu (mindestens 3).</p>
 </section>
 <h2 id="unterseiten">Unterseiten</h2>
-<p>Sie können auch auf Unterseiten von Ihrem Webserver verlinken und einige Teile der Webseite auslagern. Diese kann man dann sehr praktisch über <code>&lt;a&gt;</code>-Tags erreichen. Mit dem folgenden Beispiel erreichen Sie die Unterwebseite <code>hobbies.html</code>, welche Sie im gleichen Verzeichnis wie Ihre <code>index.html</code> erstellen müssen.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;hobbies.html&quot;</span><span class="kw">&gt;</span>Hobbies<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
+<p>Sie können auch auf Unterseiten von Ihrem Webserver verlinken und
+einige Teile der Webseite auslagern. Diese kann man dann sehr praktisch
+über <code>&lt;a&gt;</code>-Tags erreichen. Mit dem folgenden Beispiel
+erreichen Sie die Unterwebseite <code>hobbies.html</code>, welche Sie im
+gleichen Verzeichnis wie Ihre <code>index.html</code> erstellen
+müssen.</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;hobbies.html&quot;</span><span class="kw">&gt;</span>Hobbies<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
 <section id="exercise-5" class="exercise">
 <h3>Exercise</h3>
-<p>Erstellen Sie eine Unterseite <code>hobbies.html</code> mit einer Liste von Ihren Hobbies. Verlinken Sie von Ihrer Hauptseite auf diese Unterseite.</p>
+<p>Erstellen Sie eine Unterseite <code>hobbies.html</code> mit einer
+Liste von Ihren Hobbies. Verlinken Sie von Ihrer Hauptseite auf diese
+Unterseite.</p>
 </section>
 <section id="exercise-6" class="exercise">
 <h3>Exercise</h3>
-<p>Erstellen Sie Ihre eigene persönliche Webseite. Teilen Sie diese in mindestens 1 Hauptseite und 2 Unterwebseiten auf. Die Webseiten müssen Bilder, Listen und Links enthalten.</p>
-<p>Wir werden uns das nächste mal mit dem Design beschäftigen und Ihre aktuelle Webseite erweitern. Geben Sie sich also Mühe beim entwerfen dieser Seite.</p>
+<p>Erstellen Sie Ihre eigene persönliche Webseite. Teilen Sie diese in
+mindestens 1 Hauptseite und 2 Unterwebseiten auf. Die Webseiten müssen
+Bilder, Listen und Links enthalten.</p>
+<p>Wir werden uns das nächste mal mit dem Design beschäftigen und Ihre
+aktuelle Webseite erweitern. Geben Sie sich also Mühe beim entwerfen
+dieser Seite.</p>
 </section>
 </body>
 </html>
