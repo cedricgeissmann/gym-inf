@@ -149,7 +149,7 @@ Mit dem Skalarprodukt können Sie auch Winkel zwischen 2 Vektoren berechnen.
 Berechnen Sie den Winkel zwischen der Daumenspitze, dem Handgelenk und dem
 Zeigefinger. Schreiben Sie den Winkel auf die Konsole.
 
-Sie können diese Funktion auch erweitern. Wenn der Winkel zwischen 85° und 95°
+Erweitern Sie diese Funktion so dass, wenn der Winkel zwischen 80° und 100°
 ist, dann zeichnen Sie die Verbindungslinien in grün, ansonsten zeichnen Sie
 diese rot.
 :::
