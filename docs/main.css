@@ -42,3 +42,9 @@ section.example {
 .center-fig img {
     width: 100%;
 }
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

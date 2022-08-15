@@ -1,6 +1,53 @@
 ---
-title: "Eigene Webseite mit HTML"
+title: "Webseiten"
 ---
+
+Was ist eigentlich eine Webseite? Unter einer Webseite versteht man eine Seite
+die angezeigt wird, wenn man mit dem Internet-Browser eine URL aufruft. Hier
+gibt es bereits einige Begriffe die in dem folgenden Video kurz erklärt werden.
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/7hWJ9mf0Rro"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
+## Dokumente und Dateien
+
+Eine Datei ist aus der Sicht des Computers nur eine Ansammlung von Daten. Der
+Computer muss eigentlich nur wissen wo eine Datei beginnt und wo Sie fertig
+ist. Von einem Dokument spricht man wenn eine Datei ein bestimmtes Format hat,
+Beispielsweise ein PDF, ein Word, oder ein HTML-Dokument. Das letztere
+bezeichnen wir oft auch als Webseite. Webseiten sind immer HTML-Dokumente die
+vom Browser dargestellt werden.
+
+Das folgende Video erklärt nochmals was eine Datei ist.
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/GDRw8qAutI8"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
+## Textdateien und Texteditoren
+
+Textdateien sind Dateien die nur Text enthalten. Eine Worddokument ist eine
+Datei die nicht nur Text enthält, sondern auch Anweisungen wie der Text
+angezeigt wird. Sehr ähnlich verhält es sich auch bei Webseiten. Diese
+enthalten Text, Bilder und sogenannte Links, sowie Anweisungen zur Darstellung.
+Wir möchten uns aber zuerst mal nur mit Textdateien befassen. Dazu brauchen wir
+einen [Texteditor](https://vscode.dev).
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/W26SHx9F-og"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
+## HTML
 
 Webseiten werden mit **HTML** geschrieben. **HTML**
 (**H**yper-**T**ext-**M**arkup-**L**anguage) ist eine Sprache, die
@@ -84,26 +131,23 @@ eine Überschrift und nichts weiteres.
 ## Eigene Webseite erstellen
 
 Sie können ganz einfach ein **HTML**-Dokument auf Ihrem Computer erstellen und
-diesem im Browser öffnen, das können Sie dann aber leider nicht mit anderen
-Teilen, und genau das ist was Sie mit Webseiten machen möchten. Deshalb
-verwenden wir den Dienst [Replit](https://replit.com). 
+diesem im Browser öffnen.
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/oLaA6M-1ano"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
 
 ::: {.exercise}
 ### Exercise
 
-Erstellen Sie sich dort einen Account.
+Erstellen Sie eine eigene Webseite mit 3 verschiedenen Titeln und ein wenig
+Text.
+
+Öffnen Sie Ihre Webseite danach im Browser.
 :::
-
-Wenn Sie den Account haben, erstellen Sie ein neues **repl** und
-wählen Sie dort **HTML, CSS, Javascript** als Vorlage aus.
-
-Wenn Ihr **repl** erstellt wurde, öffnen Sie die Datei `index.html` und
-ersetzen Sie deren Inhalt mit dem Code von weiter oben. Drücken Sie auf den
-**Run**-Button ganz oben auf der Seite und Ihre Webseite ist gestartet. Sie
-können die Webseite jetzt auch mit anderen teilen, sie ist über die **URL**
-aufrufbar, die sie oben rechts sehen können. Sie können Ihre Änderungen
-natürlich auch sehen wenn Sie einfach auf den **Run**-Button drücken.
-
 
 ## Eigener Abschnitt
 
@@ -126,6 +170,9 @@ handelt.
 ### Exercise
 
 Fügen Sie nun noch ein paar Abschnitte hinzu.
+
+Speichern Sie die Datei ab und laden Sie diese in Ihrem Browser erneut, um die
+Änderungen Anzuzeigen.
 :::
 
 ## Weitere Tags
@@ -167,6 +214,14 @@ wenn Sie darauf klicken. `<a>`-Tags sind ein sehr wichtiger Bestandteil vom
 Web. Alle Webseiten verwenden Links um auf andere zu zeigen oder auch um auf
 Unterseiten zu verweisen.
 
+::: {.video}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/LLACbYG08j8"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
+
 ## Listen
 
 Ein anderes Element das auf Webseiten häufig verwendet wird, sind Listen. Diese
@@ -184,6 +239,13 @@ In dem Beispiel oben ist das `<ul>`-Tag, das Tag für eine unsortierte Liste
 (`<ol>` könnte für nummerierte Listen verwendet werden). Und mit dem
 `<li>`-Tag, sprechen Sie einzelne Einträge in der Liste an (**l**ist
 **i**tems).
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/to0J6p1S09o"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
 
 ::: {.exercise}
 ### Exercise
@@ -219,39 +281,18 @@ angeben. Dazu gibt man einfach eine Zahl in Pixel (`px`) an.
 <img src="https://gym-muttenz.ch/fileadmin/user_upload/_headerbilder/3.jpg" alt="Bild vom Gymnasium Muttenz" width="300px">
 ```
 
-::: {.exercise}
-### Exercise
 
-Fügen Sie einige Bilder zu Ihrer Webseite hinzu (mindestens 3).
+::: {.video}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/L09ifQx-G4E"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
-## Unterseiten
-
-Sie können auch auf Unterseiten von Ihrem Webserver verlinken und einige Teile
-der Webseite auslagern. Diese kann man dann sehr praktisch über `<a>`-Tags
-erreichen. Mit dem folgenden Beispiel erreichen Sie die Unterwebseite
-`hobbies.html`, welche Sie im gleichen Verzeichnis wie Ihre `index.html`
-erstellen müssen.
-
-```html
-<a href="hobbies.html">Hobbies</a>
-```
-
 ::: {.exercise}
 ### Exercise
 
-Erstellen Sie eine Unterseite `hobbies.html` mit einer Liste von Ihren Hobbies.
-Verlinken Sie von Ihrer Hauptseite auf diese Unterseite.
-:::
-
-
-::: {.exercise}
-### Exercise
-
-Erstellen Sie Ihre eigene persönliche Webseite. Teilen Sie diese in mindestens
-1 Hauptseite und 2 Unterwebseiten auf. Die Webseiten müssen Bilder, Listen und
-Links enthalten.
-
-Wir werden uns das nächste mal mit dem Design beschäftigen und Ihre aktuelle
-Webseite erweitern. Geben Sie sich also Mühe beim entwerfen dieser Seite.
+Erstellen Sie eine Webseite in der Sie sich selbst vorstellen. Speichern Sie
+die Webseite bei Ihnen auf dem Computer ab, wir werden diese weiterhin
+brauchen.
 :::
