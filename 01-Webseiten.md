@@ -1,4 +1,4 @@
----
+--
 title: "Webseiten"
 ---
 
@@ -33,7 +33,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Textdateien und Texteditoren
 
-Textdateien sind Dateien die nur Text enthalten. Eine Worddokument ist eine
+Textdateien sind Dateien die nur Text enthalten. Ein Worddokument ist eine
 Datei die nicht nur Text enthält, sondern auch Anweisungen wie der Text
 angezeigt wird. Sehr ähnlich verhält es sich auch bei Webseiten. Diese
 enthalten Text, Bilder und sogenannte Links, sowie Anweisungen zur Darstellung.
@@ -141,7 +141,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: {.exercise}
-### Exercise
+### Übung
 
 Erstellen Sie eine eigene Webseite mit 3 verschiedenen Titeln und ein wenig
 Text.
@@ -167,7 +167,7 @@ Damit müssen Sie jedem einzelnen Absatz sagen, das es sich um einen Absatz
 handelt.
 
 ::: {.exercise}
-### Exercise
+### Übung
 
 Fügen Sie nun noch ein paar Abschnitte hinzu.
 
@@ -191,7 +191,7 @@ weitere gute Referenz ist
 [w3schools](https://www.w3schools.com/tags/ref_byfunc.asp).
 
 ::: {.exercise}
-### Exercise
+### Übung
 
 Lesen Sie durch die Liste und probieren Sie verschiedene **Tags** aus die
 spannend klingen.
@@ -248,7 +248,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: {.exercise}
-### Exercise
+### Übung
 
 Erstellen Sie nun eine Liste von Links zu Ihren häufig verwendeten Webseiten.
 :::
@@ -290,7 +290,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: {.exercise}
-### Exercise
+### Übung
 
 Erstellen Sie eine Webseite in der Sie sich selbst vorstellen. Speichern Sie
 die Webseite bei Ihnen auf dem Computer ab, wir werden diese weiterhin
