@@ -30,6 +30,8 @@ Das Beispiel funktioniert schon mal recht gut. Es gibt jedoch einige Probleme
 damit. Zum Beispiel können wir mit der Definition die wir gewählt haben, keine
 mehrzeiligen Titel erstellen. Überlegen Sie sich wieso das so ist.
 
+TODO: Video Einführung Sprachen
+
 ## Innerhalb des Textes
 
 Das Beispiel mit dem Titel zeigt wie man ein komplettes Textstück als Titel
@@ -87,3 +89,115 @@ Grossbuchstaben) brauchen wir nur 26 Zeichen und noch einige Sonderzeichen. In
 diesem Fall wären ganz viele Bits immer `0` und damit eigentlich verschwendet,
 weil Sie keine Informationen enthalten. Wir können also die Anzahl an Bits
 reduzieren, schränken uns damit aber in der Anzahl möglicher Zeichen ein.
+
+TODO: Video zu Bits und Anzahl Zeichen.
+
+# Eigene Sprache Definieren
+
+Wir möchten nun eine eigene Sprache definieren. Dafür legen wir zuerst mal fest
+wieviele Bits wir für die Sprache verwenden möchten / können. Das ganze
+Alphabet mit Gross- und Kleinbuchstaben, umfasst 52 Zeichen. Wenn wir 6 Bits
+verwenden, haben wir noch 12 Sonderzeichen die wir verwenden können. Wir
+verwenden die folgende Liste an Sonderzeichen: `.,-_() "'!?:`.
+
+Mit diesem Zeichensatz definieren wir noch die folgenden Regeln.
+
+::: {.example}
+### Regeln
+
+Alle Regeln funktionieren wie folgt: Wird ein `(` gelesen, ist das erste Wort
+dahinter, der Name der Regel. Eine Regel wird durch `)` geschlossen.
+
+- **Titel**: `(title text)` der Text in der Klammer ist ein Titel.
+- **Kursiv**: `(emph text)` der Text in der Klammer ist hervorgehoben.
+- **Liste**: `(list -item 1 -item 2)` der Text in der Klammer ist eine Liste.
+Einzelne Elemente der Liste werden mit `-` signalisiert und enden beim nächsten
+`-` oder am ende der Liste.
+- **Abschnitt**: `(par text)` der Text in der Klammer ist ein Abschnitt.
+- **Bild**: `(img url)` die URL für ein Bild das im Internet verfügbar ist.
+- **Link**: `(link text ? url)` der Text der angezeigt werden soll und die URL
+  für diesen Link. Beide sind durch ein `?` getrennt.
+:::
+
+Mit den Regeln von oben können wir schon relativ komplexe Dokumente erstellen.
+Es gibt aber noch einige Probleme mit diesen Regeln.
+
+::: {.exercise}
+### Aufgabe: Ein Dokument erstellen
+
+Verwenden Sie die Regeln von oben um ein Dokument über ein Thema zu schreiben
+das Sie interessiert. Das Dokument muss folgende Elemente enthalten:
+
+- Einen Titel.
+- Mindestens 3 Abschnitte die jeweils einen Untertitel haben.
+- Mindestens 1 Abschnitt muss aus mehreren Absätzen bestehen.
+- Eine Aufzählung in Form einer Liste. Jedes Element der Liste soll ein Wort
+  hervorheben. Unterschiedlich wichtige Wörter sollen anders hervorgehoben
+  werden.
+- Mindestens ein Bild.
+- Ein Link mit dem Text: *Wo kann ich mehr zum Thema finden?*
+:::
+
+Wie Sie in der Aufgabe gesehen haben, reichen die Regeln nicht aus um dieses
+einfache Dokument zu erstellen. Geben Sie deshalb neue Regeln an, welche die
+Sprache ergänzen und für dieses Dokument ausreichend sind. Diskutieren Sie Ihre
+neuen Regeln in einer kleinen Gruppe (2-3 Personen) und halten Sie die
+Erkenntnisse für sich fest.
+
+## Eine eigene Sprache entwerfen
+
+Sie sollen nun eine eigene Sprache entwerfen. Ihre neue Sprache soll sich
+deutlich von der im letzten Beispiel unterscheiden. Sie sollen also eine eigene
+Struktur wählen. Zudem haben Sie nur 5 Bits zur Verfügung, das heisst Sie
+können nur 32 verschiedene Zeichen verwenden.
+
+::: {.exercise}
+### Aufgabe: Sprache definieren
+
+Definieren Sie eine Sprache in der Art wie es oben gemacht wurde. Geben Sie an
+welche Zeichen verwendet werden dürfen und wie die Sprache generell
+funktioniert. Geben Sie dann die Regeln an, welche für diese Sprache gelten.
+:::
+
+Mit dieser neuen Sprache soll jetzt ein Dokument geschrieben werden, um zu
+überprüfen ob die Sprache auch verwendbar ist und um eventuelle Fehler zu
+korrigieren. Geben Sie dafür die Regeln und die Sprache an jemand anderes
+weiter.
+
+::: {.exercise}
+### Aufgabe: Dokument erstellen
+
+Erstellen Sie ein Dokument, zu einem beliebigen Thema, mit der Sprache die Sie
+erhalten haben. Das Dokument soll die folgenden Elemente enthalten:
+
+- Klein- und Grossbuchstaben.
+- Einen Titel.
+- Das Datum wo es geschrieben wurde.
+- Den Autor.
+- Mindestens 3 Abschnitte die jeweils einen Untertitel haben.
+- Mindestens 1 Abschnitt muss aus mehreren Absätzen bestehen.
+- Eine Aufzählung in Form einer Liste. Jedes Element der Liste soll ein Wort
+  hervorheben. Unterschiedlich wichtige Wörter sollen anders hervorgehoben
+  werden.
+- Mindestens ein Bild.
+- Logo der Institution für die Sie schreiben.
+- Eine Liste von Ressourcen die Sie für Ihre Recherche verwendet haben. Nur der
+  Titel der Ressource soll sichtbar sein.
+:::
+
+Geben Sie nun das Dokument und die Sprache an eine dritte Person weiter. Diese
+Person versucht nun das Dokument zu interpretieren und auf fehlende Elemente in
+der Sprache hinzuweisen oder wenn die Sprache falsch verwendet wurde.
+
+::: {.exercise}
+### Aufgabe: Dokument interpretieren
+
+Sie verhalten sich nun wie ein Computer und interpretieren das Dokument das Sie
+erhalten haben, zusammen mit der Sprache die Sie bekommen haben. Wenn Sie etwas
+nicht interpretieren können, vermerken Sie das. Wenn die Sprache falsch
+verwendet wurde, vermerken Sie das ebenfalls.
+:::
+
+Sie erhalten nun die Interpretation von dem Dokument mit Ihrer Sprache zurück.
+Schauen Sie sich an wie gut das Dokument interpretiert werden konnte,
+diskutieren Sie allfällige Unklarheiten in der Gruppe.
