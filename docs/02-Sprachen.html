@@ -110,6 +110,7 @@ class="sourceCode txt"><code class="sourceCode default"><span id="cb1-1"><a href
 Probleme damit. Zum Beispiel können wir mit der Definition die wir
 gewählt haben, keine mehrzeiligen Titel erstellen. Überlegen Sie sich
 wieso das so ist.</p>
+<p>TODO: Video Einführung Sprachen</p>
 <h2 id="innerhalb-des-textes">Innerhalb des Textes</h2>
 <p>Das Beispiel mit dem Titel zeigt wie man ein komplettes Textstück als
 Titel benennen kann. Wenn Sie aber nur ein einzelnes Wort hervorheben
@@ -162,5 +163,115 @@ Bits immer <code>0</code> und damit eigentlich verschwendet, weil Sie
 keine Informationen enthalten. Wir können also die Anzahl an Bits
 reduzieren, schränken uns damit aber in der Anzahl möglicher Zeichen
 ein.</p>
+<p>TODO: Video zu Bits und Anzahl Zeichen.</p>
+<h1 id="eigene-sprache-definieren">Eigene Sprache Definieren</h1>
+<p>Wir möchten nun eine eigene Sprache definieren. Dafür legen wir
+zuerst mal fest wieviele Bits wir für die Sprache verwenden möchten /
+können. Das ganze Alphabet mit Gross- und Kleinbuchstaben, umfasst 52
+Zeichen. Wenn wir 6 Bits verwenden, haben wir noch 12 Sonderzeichen die
+wir verwenden können. Wir verwenden die folgende Liste an Sonderzeichen:
+<code>.,-_() "'!?:</code>.</p>
+<p>Mit diesem Zeichensatz definieren wir noch die folgenden Regeln.</p>
+<section id="regeln" class="example">
+<h3>Regeln</h3>
+<p>Alle Regeln funktionieren wie folgt: Wird ein <code>(</code> gelesen,
+ist das erste Wort dahinter, der Name der Regel. Eine Regel wird durch
+<code>)</code> geschlossen.</p>
+<ul>
+<li><strong>Titel</strong>: <code>(title text)</code> der Text in der
+Klammer ist ein Titel.</li>
+<li><strong>Kursiv</strong>: <code>(emph text)</code> der Text in der
+Klammer ist hervorgehoben.</li>
+<li><strong>Liste</strong>: <code>(list -item 1 -item 2)</code> der Text
+in der Klammer ist eine Liste. Einzelne Elemente der Liste werden mit
+<code>-</code> signalisiert und enden beim nächsten <code>-</code> oder
+am ende der Liste.</li>
+<li><strong>Abschnitt</strong>: <code>(par text)</code> der Text in der
+Klammer ist ein Abschnitt.</li>
+<li><strong>Bild</strong>: <code>(img url)</code> die URL für ein Bild
+das im Internet verfügbar ist.</li>
+<li><strong>Link</strong>: <code>(link text ? url)</code> der Text der
+angezeigt werden soll und die URL für diesen Link. Beide sind durch ein
+<code>?</code> getrennt.</li>
+</ul>
+</section>
+<p>Mit den Regeln von oben können wir schon relativ komplexe Dokumente
+erstellen. Es gibt aber noch einige Probleme mit diesen Regeln.</p>
+<section id="aufgabe-ein-dokument-erstellen" class="exercise">
+<h3>Aufgabe: Ein Dokument erstellen</h3>
+<p>Verwenden Sie die Regeln von oben um ein Dokument über ein Thema zu
+schreiben das Sie interessiert. Das Dokument muss folgende Elemente
+enthalten:</p>
+<ul>
+<li>Einen Titel.</li>
+<li>Mindestens 3 Abschnitte die jeweils einen Untertitel haben.</li>
+<li>Mindestens 1 Abschnitt muss aus mehreren Absätzen bestehen.</li>
+<li>Eine Aufzählung in Form einer Liste. Jedes Element der Liste soll
+ein Wort hervorheben. Unterschiedlich wichtige Wörter sollen anders
+hervorgehoben werden.</li>
+<li>Mindestens ein Bild.</li>
+<li>Ein Link mit dem Text: <em>Wo kann ich mehr zum Thema
+finden?</em></li>
+</ul>
+</section>
+<p>Wie Sie in der Aufgabe gesehen haben, reichen die Regeln nicht aus um
+dieses einfache Dokument zu erstellen. Geben Sie deshalb neue Regeln an,
+welche die Sprache ergänzen und für dieses Dokument ausreichend sind.
+Diskutieren Sie Ihre neuen Regeln in einer kleinen Gruppe (2-3 Personen)
+und halten Sie die Erkenntnisse für sich fest.</p>
+<h2 id="eine-eigene-sprache-entwerfen">Eine eigene Sprache
+entwerfen</h2>
+<p>Sie sollen nun eine eigene Sprache entwerfen. Ihre neue Sprache soll
+sich deutlich von der im letzten Beispiel unterscheiden. Sie sollen also
+eine eigene Struktur wählen. Zudem haben Sie nur 5 Bits zur Verfügung,
+das heisst Sie können nur 32 verschiedene Zeichen verwenden.</p>
+<section id="aufgabe-sprache-definieren" class="exercise">
+<h3>Aufgabe: Sprache definieren</h3>
+<p>Definieren Sie eine Sprache in der Art wie es oben gemacht wurde.
+Geben Sie an welche Zeichen verwendet werden dürfen und wie die Sprache
+generell funktioniert. Geben Sie dann die Regeln an, welche für diese
+Sprache gelten.</p>
+</section>
+<p>Mit dieser neuen Sprache soll jetzt ein Dokument geschrieben werden,
+um zu überprüfen ob die Sprache auch verwendbar ist und um eventuelle
+Fehler zu korrigieren. Geben Sie dafür die Regeln und die Sprache an
+jemand anderes weiter.</p>
+<section id="aufgabe-dokument-erstellen" class="exercise">
+<h3>Aufgabe: Dokument erstellen</h3>
+<p>Erstellen Sie ein Dokument, zu einem beliebigen Thema, mit der
+Sprache die Sie erhalten haben. Das Dokument soll die folgenden Elemente
+enthalten:</p>
+<ul>
+<li>Klein- und Grossbuchstaben.</li>
+<li>Einen Titel.</li>
+<li>Das Datum wo es geschrieben wurde.</li>
+<li>Den Autor.</li>
+<li>Mindestens 3 Abschnitte die jeweils einen Untertitel haben.</li>
+<li>Mindestens 1 Abschnitt muss aus mehreren Absätzen bestehen.</li>
+<li>Eine Aufzählung in Form einer Liste. Jedes Element der Liste soll
+ein Wort hervorheben. Unterschiedlich wichtige Wörter sollen anders
+hervorgehoben werden.</li>
+<li>Mindestens ein Bild.</li>
+<li>Logo der Institution für die Sie schreiben.</li>
+<li>Eine Liste von Ressourcen die Sie für Ihre Recherche verwendet
+haben. Nur der Titel der Ressource soll sichtbar sein.</li>
+</ul>
+</section>
+<p>Geben Sie nun das Dokument und die Sprache an eine dritte Person
+weiter. Diese Person versucht nun das Dokument zu interpretieren und auf
+fehlende Elemente in der Sprache hinzuweisen oder wenn die Sprache
+falsch verwendet wurde.</p>
+<section id="aufgabe-dokument-interpretieren" class="exercise">
+<h3>Aufgabe: Dokument interpretieren</h3>
+<p>Sie verhalten sich nun wie ein Computer und interpretieren das
+Dokument das Sie erhalten haben, zusammen mit der Sprache die Sie
+bekommen haben. Wenn Sie etwas nicht interpretieren können, vermerken
+Sie das. Wenn die Sprache falsch verwendet wurde, vermerken Sie das
+ebenfalls.</p>
+</section>
+<p>Sie erhalten nun die Interpretation von dem Dokument mit Ihrer
+Sprache zurück. Schauen Sie sich an wie gut das Dokument interpretiert
+werden konnte, diskutieren Sie allfällige Unklarheiten in der
+Gruppe.</p>
 </body>
 </html>
