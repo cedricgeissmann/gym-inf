@@ -30,9 +30,12 @@ Das Beispiel funktioniert schon mal recht gut. Es gibt jedoch einige Probleme
 damit. Zum Beispiel können wir mit der Definition die wir gewählt haben, keine
 mehrzeiligen Titel erstellen. Überlegen Sie sich wieso das so ist.
 
----
-TODO: Video Einführung Sprachen
----
+::: {.video}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/HdxvU07V2Qs"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
 
 ## Innerhalb des Textes
 
@@ -92,9 +95,12 @@ diesem Fall wären ganz viele Bits immer `0` und damit eigentlich verschwendet,
 weil Sie keine Informationen enthalten. Wir können also die Anzahl an Bits
 reduzieren, schränken uns damit aber in der Anzahl möglicher Zeichen ein.
 
----
-TODO: Video zu Bits und Anzahl Zeichen.
----
+::: {.video}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/oxZOKFqBaAY"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
 
 # Eigene Sprache Definieren
 
