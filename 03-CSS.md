@@ -50,6 +50,17 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
+## Referenzen für CSS
+
+Hier sind einige Links aufgelistet die Ihnen helfen können mit CSS umzugehen.
+Sie müssen diese nicht alle jetzt anschauen, es ist aber von Vorteil wenn Sie
+wissen was Sie auf welchem Link finden.
+
+- [Selektoren](https://www.w3schools.com/cssref/css_selectors.asp)
+- [w3schools.com](https://www.w3schools.com/css/default.asp)
+- [Cheat Sheet](http://www.pxleyes.com/blog/2010/03/most-practical-css-cheat-sheet-yet/)
+
+
 ## Das Box Model
 
 In CSS wird das **Box Model** angewendet um die Grösse von allen Elementen zu
