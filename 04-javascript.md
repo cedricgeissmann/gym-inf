@@ -35,7 +35,7 @@ Browser verwendet wird.
 
 ::: {.video}
 <iframe width="560" height="315"
-src="https://youtu.be/a48u6kfB1bY"
+src="https://youtube.com/embed/a48u6kfB1bY"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
@@ -91,7 +91,7 @@ es gut an, es erklärt zusätzliche Konzepte die im Text schwer zu erklären sin
 
 ::: {.video}
 <iframe width="560" height="315"
-src="https://youtu.be/mQGc0CKsDP8"
+src="https://youtube.com/embed/mQGc0CKsDP8"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
@@ -119,7 +119,7 @@ funktioniert und das Konzept von Variablen kurz beschrieben.
 
 ::: {.video}
 <iframe width="560" height="315"
-src="https://youtu.be/7tUz08mjoRc"
+src="https://youtube.com/embed/7tUz08mjoRc"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
@@ -167,7 +167,7 @@ abändern können.
 
 ::: {.video}
 <iframe width="560" height="315"
-src="https://youtu.be/9V-56Ej_Dxc"
+src="https://youtube.com/embed/9V-56Ej_Dxc"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
@@ -224,7 +224,7 @@ Video wird gleich erklärt wie das ganze funktioniert.
 
 ::: {.video}
 <iframe width="560" height="315"
-src="https://youtu.be/RH3g8pA2M_g"
+src="https://youtube.com/embed/RH3g8pA2M_g"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
@@ -284,7 +284,7 @@ dem Scoping funktioniert.
 
 ::: {.video}
 <iframe width="560" height="315"
-src="https://youtu.be/cR5bT_cetI8"
+src="https://youtube.com/embed/cR5bT_cetI8"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
@@ -386,7 +386,7 @@ Code von dem Beispiel, und versuchen Sie dem Video zu folgen.
 
 ::: {.video}
 <iframe width="560" height="315"
-src="https://youtu.be/LqtyFqWI19c"
+src="https://youtube.com/embed/LqtyFqWI19c"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
