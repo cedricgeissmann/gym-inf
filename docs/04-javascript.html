@@ -112,6 +112,13 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="
 ausführen soll. Das Resultat ist das Sie ein Popup-Fenster mit der
 Nachricht <code>"Hello World!"</code> bekommen.</p>
 </section>
+<p>Das folgende Video gibt eine kurze Einführung in Javascript und wie
+es im Browser verwendet wird.</p>
+<div class="video">
+<iframe width="560" height="315" src="https://youtu.be/a48u6kfB1bY" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
 <p>Mit diesen Popup-Fenstern zu arbeiten ist jedoch mühsam, deshalb gibt
 es die Möglichkeit die Ausgabe auf eine <em>Konsole</em> zu schreiben.
 Diese ist normalerweise für den Benutzer auch nicht sichtbar, Entwickler
@@ -145,19 +152,34 @@ folgenden Code überschreiben.</p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;script.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span></code></pre></div>
 </section>
+<p>Das folgende Video beschreibt wie Sie eine Datei auslagern können.
+Schauen Sie es gut an, es erklärt zusätzliche Konzepte die im Text
+schwer zu erklären sind.</p>
+<div class="video">
+<iframe width="560" height="315" src="https://youtu.be/mQGc0CKsDP8" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
 <h2 id="elemente-auswählen">Elemente auswählen</h2>
 <p>Nur Text auf die <em>Konsole</em> zu schreiben ist ja nicht so
 spannend. Mehr Interaktivität bekommen Sie wenn Elemente die auf Ihrer
 Webseite sind auswählen können, und diese manipulieren.</p>
 <section id="beispiel-2" class="example">
 <h3>Beispiel</h3>
-<p>Lesen Sie das erste <code>&lt;h1&gt;</code>-ta auf Ihrer Webseite aus
-und schreiben Sie den Inhalt auf die <em>Konsole</em>. Das können Sie
-mit dem folgenden Code erreichen.</p>
+<p>Lesen Sie das erste <code>&lt;h1&gt;</code>-tag auf Ihrer Webseite
+aus und schreiben Sie den Inhalt auf die <em>Konsole</em>. Das können
+Sie mit dem folgenden Code erreichen.</p>
 <div class="sourceCode" id="cb5"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> titleText <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;h1&quot;</span>)<span class="op">.</span><span class="at">innerHTML</span><span class="op">;</span></span>
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> titleText <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;h1&quot;</span>)<span class="op">.</span><span class="at">textContent</span><span class="op">;</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(titleText)<span class="op">;</span></span></code></pre></div>
 </section>
+<p>Im folgenden Video wir erklärt wie das mit dem auswählen der Elemente
+funktioniert und das Konzept von Variablen kurz beschrieben.</p>
+<div class="video">
+<iframe width="560" height="315" src="https://youtu.be/7tUz08mjoRc" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
 <h2 id="einstieg-ins-programmieren">Einstieg ins Programmieren</h2>
 <p>Hier machen Sie schon sehr viel was mit Programmieren zu tun hat und
 es ist wichtig das Sie verstehen was hier passiert.</p>
@@ -189,8 +211,15 @@ die Seite bereits erstellt haben.</p>
 <code>Hello World!</code> setzen. Das können Sie mit dem folgenden Code
 erreichen.</p>
 <div class="sourceCode" id="cb6"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;h1&quot;</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">&quot;Hello World!&quot;</span><span class="op">;</span></span></code></pre></div>
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;h1&quot;</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">&quot;Hello World!&quot;</span><span class="op">;</span></span></code></pre></div>
 </section>
+<p>Im nachfolgenden Video wird erklärt wie Sie Inhalte auf Ihrer
+Webseite auch abändern können.</p>
+<div class="video">
+<iframe width="560" height="315" src="https://youtu.be/9V-56Ej_Dxc" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
 <h2 id="funktionen">Funktionen</h2>
 <p><strong>Javascript</strong> basiert auf <strong>Funktionen</strong>.
 Sie können sich <strong>Funktionen</strong> als ein Stück Code
@@ -229,7 +258,12 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;h1&quot;</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">&quot;Titel wurde angeklick!&quot;</span><span class="op">;</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Wenn Sie nun auf den Button klicken, sehen Sie das sich der Titel
-ändert. :::</p>
+ändert. Im Video wird gleich erklärt wie das ganze funktioniert.</p>
+<div class="video">
+<iframe width="560" height="315" src="https://youtu.be/RH3g8pA2M_g" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
 <section id="beispiel-zähler-erstellen" class="example">
 <h3>Beispiel: Zähler erstellen</h3>
 <p>Sie können auch einen einfachen Zähler erstellen. Mit dem folgenden
@@ -269,6 +303,14 @@ verfügbar, sie kann in anderen Funktionen also nicht verwendet
 werden.</p>
 <p>Wenn man eine Variable nun an eine andere Funktion übergeben muss,
 kann man dies mit Funktionsparametern (Argumenten) machen.</p>
+<p>Bevor Sie sich das Beispiel anschauen, schauen Sie sich das Video an,
+und machen Sie sich dann an dem Beispiel klar dass Sie verstanden haben
+wie das mit dem Scoping funktioniert.</p>
+<div class="video">
+<iframe width="560" height="315" src="https://youtu.be/cR5bT_cetI8" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
 <section id="beispiel-5" class="example">
 <h3>Beispiel</h3>
 <p>Sie haben 2 Funktionen gegeben. Von der ersten Funktion möchten Sie
@@ -345,6 +387,14 @@ bis zum Ende einer Liste zählen möchten.</p>
 <p>Wenn Sie über alle Elemente einer Liste iterieren möchten, können Sie
 dies mit Schleifen machen. Sie können generell auch Schleifen zum zählen
 verwenden, meist werden Sie aber für Listen gebraucht.</p>
+<p>Das folgende Video erklärt das Beispiel das nachher folgt. Kopieren
+Sie den Code von dem Beispiel, und versuchen Sie dem Video zu
+folgen.</p>
+<div class="video">
+<iframe width="560" height="315" src="https://youtu.be/LqtyFqWI19c" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
 <section id="beispiel-6" class="example">
 <h3>Beispiel</h3>
 <p>Sie möchten den Inhalt von allen <code>&lt;h2&gt;</code>-tags auf

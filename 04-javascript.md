@@ -30,6 +30,17 @@ Argument `"Hello World!"` ausführen soll. Das Resultat ist das Sie ein
 Popup-Fenster mit der Nachricht `"Hello World!"` bekommen.
 :::
 
+Das folgende Video gibt eine kurze Einführung in Javascript und wie es im
+Browser verwendet wird.
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://youtu.be/a48u6kfB1bY"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
+
 Mit diesen Popup-Fenstern zu arbeiten ist jedoch mühsam, deshalb gibt es die
 Möglichkeit die Ausgabe auf eine *Konsole* zu schreiben. Diese ist
 normalerweise für den Benutzer auch nicht sichtbar, Entwickler haben jedoch die
@@ -75,6 +86,16 @@ laden. Dazu können Sie Ihr `<script>`-tag mit dem folgenden Code überschreiben
 ```
 :::
 
+Das folgende Video beschreibt wie Sie eine Datei auslagern können. Schauen Sie
+es gut an, es erklärt zusätzliche Konzepte die im Text schwer zu erklären sind.
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://youtu.be/mQGc0CKsDP8"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
 ## Elemente auswählen
 
 Nur Text auf die *Konsole* zu schreiben ist ja nicht so spannend. Mehr
@@ -84,13 +105,23 @@ können, und diese manipulieren.
 ::: {.example}
 ### Beispiel
 
-Lesen Sie das erste `<h1>`-ta auf Ihrer Webseite aus und schreiben Sie den
+Lesen Sie das erste `<h1>`-tag auf Ihrer Webseite aus und schreiben Sie den
 Inhalt auf die *Konsole*. Das können Sie mit dem folgenden Code erreichen.
 
 ```javascript
-var titleText = document.querySelector("h1").innerHTML;
+const titleText = document.querySelector("h1").textContent;
 console.log(titleText);
 ```
+:::
+
+Im folgenden Video wir erklärt wie das mit dem auswählen der Elemente
+funktioniert und das Konzept von Variablen kurz beschrieben.
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://youtu.be/7tUz08mjoRc"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ## Einstieg ins Programmieren
@@ -127,9 +158,20 @@ Sie möchten den Inhalt von Ihrem ersten Titel auf `Hello World!` setzen. Das
 können Sie mit dem folgenden Code erreichen.
 
 ```javascript
-document.querySelector("h1").innerHTML = "Hello World!";
+document.querySelector("h1").textContent = "Hello World!";
 ```
 :::
+
+Im nachfolgenden Video wird erklärt wie Sie Inhalte auf Ihrer Webseite auch
+abändern können.
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://youtu.be/9V-56Ej_Dxc"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
 
 ## Funktionen
 
@@ -177,7 +219,14 @@ function test() {
 }
 ```
 
-Wenn Sie nun auf den Button klicken, sehen Sie das sich der Titel ändert.
+Wenn Sie nun auf den Button klicken, sehen Sie das sich der Titel ändert. Im
+Video wird gleich erklärt wie das ganze funktioniert.
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://youtu.be/RH3g8pA2M_g"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: {.example}
@@ -228,6 +277,17 @@ sie kann in anderen Funktionen also nicht verwendet werden.
 
 Wenn man eine Variable nun an eine andere Funktion übergeben muss, kann man
 dies mit Funktionsparametern (Argumenten) machen.
+
+Bevor Sie sich das Beispiel anschauen, schauen Sie sich das Video an, und
+machen Sie sich dann an dem Beispiel klar dass Sie verstanden haben wie das mit
+dem Scoping funktioniert.
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://youtu.be/cR5bT_cetI8"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
 
 ::: {.example}
 ### Beispiel
@@ -320,6 +380,16 @@ zählen möchten.
 Wenn Sie über alle Elemente einer Liste iterieren möchten, können Sie dies mit
 Schleifen machen. Sie können generell auch Schleifen zum zählen verwenden,
 meist werden Sie aber für Listen gebraucht.
+
+Das folgende Video erklärt das Beispiel das nachher folgt. Kopieren Sie den
+Code von dem Beispiel, und versuchen Sie dem Video zu folgen.
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://youtu.be/LqtyFqWI19c"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
 
 ::: {.example}
 ### Beispiel
