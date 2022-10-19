@@ -105,7 +105,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 # Eigene Sprache Definieren
 
 Wir möchten nun eine eigene Sprache definieren. Dafür legen wir zuerst mal fest
-wie viele Bits wir für die Sprache verwenden möchten / können. Das ganze
+wieviele Bits wir für die Sprache verwenden möchten / können. Das ganze
 Alphabet mit Gross- und Kleinbuchstaben, umfasst 52 Zeichen. Wenn wir 6 Bits
 verwenden, haben wir noch 12 Sonderzeichen die wir verwenden können. Wir
 verwenden die folgende Liste an Sonderzeichen: `.,-_() "'!?:`.
