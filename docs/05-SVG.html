@@ -112,10 +112,10 @@ erstellt werden kann. Im nachfolgenden Video wird noch genauer erklärt
 wie das ganze funktioniert.</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode svg"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">svg</span><span class="ot"> height=</span><span class="st">&quot;100&quot;</span><span class="ot"> width=</span><span class="st">&quot;100&quot;</span>&gt;</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">circle</span><span class="ot"> cx=</span><span class="st">&quot;50&quot;</span><span class="ot"> cy=</span><span class="st">&quot;50&quot;</span><span class="ot"> r=</span><span class="st">&quot;50&quot;</span><span class="ot"> fill=</span><span class="st">&quot;red&quot;</span>&gt;</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">circle</span><span class="ot"> cx=</span><span class="st">&quot;50&quot;</span><span class="ot"> cy=</span><span class="st">&quot;50&quot;</span><span class="ot"> r=</span><span class="st">&quot;50&quot;</span><span class="ot"> fill=</span><span class="st">&quot;red&quot;</span> /&gt;</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">svg</span>&gt;</span></code></pre></div>
 <div class="video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aHUN_tgLoqk" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IidjpojV1Mk" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </div>
@@ -127,6 +127,105 @@ nebeneinander und werden von rechts nach links immer wie kleiner.</p>
 <p><strong>Tipp:</strong> <a
 href="https://www.w3schools.com/graphics/svg_circle.asp">Hier</a> können
 Sie mehr über Kreise in SVG erfahren.</p>
+</section>
+<h2 id="weitere-formen">Weitere Formen</h2>
+<p>Sie sind nicht nur auf Kreise beschränkt, Sie können alle möglichen
+Formen verwenden. Am einfachsten sind Vierecke und Linien. Im folgenden
+Beispiel finden Sie Code der Ihnen ein Viereck und eine Linie
+zeichnet.</p>
+<div class="example">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode svg"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">svg</span><span class="ot"> height=</span><span class="st">&quot;100&quot;</span><span class="ot"> width=</span><span class="st">&quot;100&quot;</span>&gt;</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">rect</span><span class="ot"> x=</span><span class="st">&quot;25&quot;</span><span class="ot"> y=</span><span class="st">&quot;25&quot;</span><span class="ot"> width=</span><span class="st">&quot;50&quot;</span><span class="ot"> height=</span><span class="st">&quot;25&quot;</span><span class="ot"> fill=</span><span class="st">&quot;green&quot;</span> /&gt;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">line</span><span class="ot"> x1=</span><span class="st">&quot;0&quot;</span><span class="ot"> y1=</span><span class="st">&quot;0&quot;</span><span class="ot"> x2=</span><span class="st">&quot;100&quot;</span><span class="ot"> y2=</span><span class="st">&quot;100&quot;</span><span class="ot"> stroke=</span><span class="st">&quot;blue&quot;</span><span class="ot"> stroke-width=</span><span class="st">&quot;5&quot;</span> /&gt;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">svg</span>&gt;</span></code></pre></div>
+<p><strong>Tipp:</strong> <a
+href="https://www.w3schools.com/graphics/svg_rect.asp">Hier</a> finden
+Sie Dokumentation für Rechtecke. Sie können in der Seitenleiste Links
+auch noch weitere Formen finden.</p>
+</div>
+<div class="exercise">
+<p>Erstellen Sie eine Grafik mit mindestens 4 verschiedenen Formen. Jede
+Form soll eine andere Farbe haben.</p>
+</div>
+<h2 id="dreiecke">Dreiecke</h2>
+<p>Es gibt in SVG keinen direkten Befehl für Dreiecke, Sie können aber
+Polygone zeichnen. Polygone sind einfach 2 dimensionale Körper mit
+mehreren Ecken / Winkeln. Im folgenden Video wird ein Polygon als
+Beispiel gezeigt.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode svg"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">svg</span><span class="ot"> height=</span><span class="st">&quot;100&quot;</span><span class="ot"> width=</span><span class="st">&quot;100&quot;</span>&gt;</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">polygon</span><span class="ot"> points=</span><span class="st">&quot;0,0 50,100 100,0&quot;</span><span class="ot"> fill=</span><span class="st">&quot;green&quot;</span><span class="ot"> stroke=</span><span class="st">&quot;red&quot;</span> /&gt;</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">svg</span>&gt;</span></code></pre></div>
+<div class="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vp6NTzAhmKA" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<section id="aufgabe-1" class="exercise">
+<h3>Aufgabe</h3>
+<p>Zeichnen Sie einen Stern mit 5 Spitzen.</p>
+</section>
+<h2 id="pfade">Pfade</h2>
+<p>Das wichtigste Werkzeug in SVG sind Pfade (oder path). Damit können
+Sie einer Linie sagen welchem Pfad sie folgen soll, und somit sehr
+komplexe Formen zeichnen. Die Formen können Sie auch ausfüllen, somit
+können Sie Pfade auch verwenden um Polygone zu zeichnen. Pfade verwenden
+das spezielle Attribut <code>d</code>, damit können Sie einen Pfad
+angeben, dafür gibt es eine eigene Sprache. Die wird Ihnen in dem
+folgenden Video erklärt.</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode svg"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">svg</span><span class="ot"> height=</span><span class="st">&quot;100&quot;</span><span class="ot"> width=</span><span class="st">&quot;100&quot;</span>&gt;</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">path</span><span class="ot"> d=</span><span class="st">&quot;M 20,0 L 50,100 l 50,-100 Z&quot;</span><span class="ot"> fill=</span><span class="st">&quot;green&quot;</span><span class="ot"> stroke=</span><span class="st">&quot;red&quot;</span> /&gt;</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">path</span><span class="ot"> d=</span><span class="st">&quot;M 0,0 Q 50,100 100,0 Z&quot;</span><span class="ot"> fill=</span><span class="st">&quot;transparent&quot;</span><span class="ot"> stroke=</span><span class="st">&quot;black&quot;</span> /&gt;</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">svg</span>&gt;</span></code></pre></div>
+<div class="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FuOt1YXYWBM" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<h2 id="animationen">Animationen</h2>
+<p>Das moderne Internet basiert sehr stark auf Animationen. Mit SVG
+können diese recht einfach gemacht werden. Wie man Animationen am
+einfachsten oder am effizientesten macht, das ist eine Wissenschaft für
+sich selbst. Wir beschäftigen uns einfach mal damit das wir mit
+Animationen herumspielen können. Dafür schauen wir uns das folgende
+Beispiel an, welches dann im Video erklärt wird.</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode svg"><code class="sourceCode xml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">svg</span><span class="ot"> height=</span><span class="st">&quot;100&quot;</span><span class="ot"> width=</span><span class="st">&quot;100&quot;</span>&gt;</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">ellipse</span><span class="ot"> cx=</span><span class="st">&quot;50&quot;</span><span class="ot"> cy=</span><span class="st">&quot;50&quot;</span><span class="ot"> rx=</span><span class="st">&quot;50&quot;</span><span class="ot"> ry=</span><span class="st">&quot;50&quot;</span><span class="ot"> fill=</span><span class="st">&quot;red&quot;</span>&gt;</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">animate</span><span class="ot"> attributeName=</span><span class="st">&quot;ry&quot;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ot">            values=</span><span class="st">&quot;50;25;50&quot;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ot">            dur=</span><span class="st">&quot;2s&quot;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ot">            repeatCount=</span><span class="st">&quot;indefinite&quot;</span> /&gt;</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">ellipse</span>&gt;</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">svg</span>&gt;</span></code></pre></div>
+<div class="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vzINS_IAkhA" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<p>Sie können alle möglichen Attribute animieren, solange diese einen
+sinnvollen Übergang haben. Probieren Sie es aus indem Sie mit dem Code
+spielen und eine tolle Animation erstellen.</p>
+<section id="aufgabe-2" class="exercise">
+<h3>Aufgabe</h3>
+<p>Erstellen Sie ein Emoji so wie das unten, welches Sie anlächelt und
+dann zwinkert. Sie können auch einen anderen Teil (oder mehrere Teile)
+animieren.</p>
+<center>
+<svg id="svg-elem" height="100" width="100">
+<circle cx="50" cy="50" r="50" fill="yellow" />
+<circle cx="25" cy="35" r="10" fill="black" />
+<ellipse cx="75" cy="35" rx="10" ry="10" fill="black">
+<animate attributeName="ry"
+            values="10;5;10"
+            dur="2s"
+            repeatCount="indefinite" /> </ellipse>
+<path fill="transparent" stroke="black" stroke-width="3"
+        d="M 25,65 q 25,25 50,0" />
+</svg>
+</center>
 </section>
 </body>
 </html>
