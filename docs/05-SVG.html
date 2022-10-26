@@ -8,10 +8,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -226,6 +231,45 @@ animieren.</p>
         d="M 25,65 q 25,25 50,0" />
 </svg>
 </center>
+</section>
+<h2 id="animationen-entlang-eines-pfades">Animationen entlang eines
+Pfades</h2>
+<p>Wie Sie bereits gesehen haben, kann man mit SVG sehr einfach
+Animationen erstellen. Ein einfaches Element für Animationen ist wenn
+Sie ein Objekt einem Pfad folgen lassen. Das ganze kann dann so
+aussehen.</p>
+<center>
+<svg width="200" height="200">
+<rect x="-5" y="-5" height="10" width="10" fill="green">
+<animateMotion dur="5s" repeatCount="indefinite"
+              path="M20, 60 C20, -50 180, 150 180, 60 C180 -60 20, 150 20, 60 z"
+              rotate="auto"
+              /> </rect>
+<path stroke="black" stroke-width="0.5" fill="transparent"
+            d="M20, 60 C20, -50 180, 150 180, 60 C180 -60 20, 150 20, 60 z"
+            />
+</svg>
+</center>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode svg"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">svg</span><span class="ot"> width=</span><span class="st">&quot;200&quot;</span><span class="ot"> height=</span><span class="st">&quot;200&quot;</span>&gt;</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">rect</span><span class="ot"> x=</span><span class="st">&quot;-5&quot;</span><span class="ot"> y=</span><span class="st">&quot;-5&quot;</span><span class="ot"> height=</span><span class="st">&quot;10&quot;</span><span class="ot"> width=</span><span class="st">&quot;10&quot;</span><span class="ot"> fill=</span><span class="st">&quot;green&quot;</span>&gt;</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">animateMotion</span><span class="ot"> dur=</span><span class="st">&quot;5s&quot;</span><span class="ot"> repeatCount=</span><span class="st">&quot;indefinite&quot;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ot">            path=</span><span class="st">&quot;M20, 60 C20, -50 180, 150 180, 60 C180 -60 20, 150 20, 60 z&quot;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ot">            rotate=</span><span class="st">&quot;auto&quot;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        /&gt;</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">rect</span>&gt;</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">path</span><span class="ot"> stroke=</span><span class="st">&quot;black&quot;</span><span class="ot"> stroke-width=</span><span class="st">&quot;0.5&quot;</span><span class="ot"> fill=</span><span class="st">&quot;transparent&quot;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ot">        d=</span><span class="st">&quot;M20, 60 C20, -50 180, 150 180, 60 C180 -60 20, 150 20, 60 z&quot;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    /&gt;</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">svg</span>&gt;</span></code></pre></div>
+<p>Mit dem <code>&lt;animateMotion&gt;</code>-Tag können Sie ein Objekt
+ganz einfach einem Pfad folgen lassen. Damit lassen sich schon sehr
+komplexe Animationen erstellen.</p>
+<section id="aufgabe-3" class="exercise">
+<h3>Aufgabe</h3>
+<p>Gehen Sie in 2er Gruppen zusammen und erstellen Sie eine komplexe
+Animation. Die Animationen werden am Ende der Lektion der ganzen Klasse
+gezeigt.</p>
 </section>
 </body>
 </html>

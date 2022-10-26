@@ -176,3 +176,47 @@ zwinkert. Sie können auch einen anderen Teil (oder mehrere Teile) animieren.
 </svg>
 </center>
 :::
+
+## Animationen entlang eines Pfades
+
+Wie Sie bereits gesehen haben, kann man mit SVG sehr einfach Animationen
+erstellen. Ein einfaches Element für Animationen ist wenn Sie ein Objekt einem
+Pfad folgen lassen. Das ganze kann dann so aussehen.
+
+<center>
+<svg width="200" height="200">
+        <rect x="-5" y="-5" height="10" width="10" fill="green">
+            <animateMotion dur="5s" repeatCount="indefinite"
+              path="M20, 60 C20, -50 180, 150 180, 60 C180 -60 20, 150 20, 60 z"
+              rotate="auto"
+              />
+        </rect>
+        <path stroke="black" stroke-width="0.5" fill="transparent"
+            d="M20, 60 C20, -50 180, 150 180, 60 C180 -60 20, 150 20, 60 z"
+            />
+    </svg>
+</center>
+
+```svg
+<svg width="200" height="200">
+    <rect x="-5" y="-5" height="10" width="10" fill="green">
+        <animateMotion dur="5s" repeatCount="indefinite"
+            path="M20, 60 C20, -50 180, 150 180, 60 C180 -60 20, 150 20, 60 z"
+            rotate="auto"
+        />
+    </rect>
+    <path stroke="black" stroke-width="0.5" fill="transparent"
+        d="M20, 60 C20, -50 180, 150 180, 60 C180 -60 20, 150 20, 60 z"
+    />
+</svg>
+```
+
+Mit dem `<animateMotion>`-Tag können Sie ein Objekt ganz einfach einem Pfad
+folgen lassen. Damit lassen sich schon sehr komplexe Animationen erstellen.
+
+::: {.exercise}
+### Aufgabe
+
+Gehen Sie in 2er Gruppen zusammen und erstellen Sie eine komplexe Animation.
+Die Animationen werden am Ende der Lektion der ganzen Klasse gezeigt.
+:::
