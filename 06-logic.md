@@ -26,6 +26,16 @@ Man kann auf alles mögliche überprüfen, das einzige was zählt, ist das ein W
 
 Bevor wir mit Bedingungen weiter machen, setzen wir uns ein Repository auf. Dafür habe ich Ihnen bereits ein Repository vorbereitet. Sie finden dieses unter [https://github.com/cedricgeissmann/js-conditionals-loops-and-lists](https://github.com/cedricgeissmann/js-conditionals-loops-and-lists). Das nachfolgende Video zeigt wie Sie das Repository aufsetzen können, so das Sie es praktisch verwenden können.
 
+
+
+::: {.video}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/vL1kvhs9Fl0"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
+
 ::: {.exercise}
 ### Aufgabe
 
