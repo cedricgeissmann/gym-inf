@@ -298,5 +298,302 @@ meistens ausgetauscht werden. Wir werden öfters
 <code>for</code>-Schleifen verwenden, weil diese praktisch sind um über
 Listen zu iterieren.</p>
 <h2 id="listen">Listen</h2>
+<p>Listen sind Daten die miteinander Verknüpft sind. Oftmals liegen die
+Daten im Speicher des Computers aneinander, was es sehr effizient macht
+auf einzelne Elemente einer Liste zuzugreifen. Beim Zugriff auf eine
+Liste sagen Sie dem Computer wo die Liste beginnt, und iwe weit er gehen
+muss um das gewünschte Element zu suchen.</p>
+<section id="primzahlen-bis-20" class="example">
+<h3>Primzahlen bis 20</h3>
+<p>Im folgenden Beispiel haben wir alle Primzahlen bis zur Zahl 20.</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">example_primes</span>() {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Liste der Primzahlen</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    primes <span class="op">=</span> [<span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">5</span><span class="op">,</span> <span class="dv">7</span><span class="op">,</span> <span class="dv">11</span><span class="op">,</span> <span class="dv">13</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">19</span>]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>( primes[<span class="dv">0</span>] )</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>( primes[<span class="dv">7</span>] )</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Der Code erstellt eine Liste der Primzahlen und gibt dann die erste
+und die achte Primzahl aus.</p>
+</section>
+<p>Sie sehen an dem Code oben das die <code>[]</code>-Klammern für
+Listen gebraucht werden. Zum einen werden sie gebraucht um eine Liste zu
+erstellen, zum anderen brauchen Sie die <code>[]</code>-Klammern um auf
+Elemente aus der Liste zuzugreifen.</p>
+<p><strong>ACHTUNG:</strong> Man beginnt in fast allen
+Programmiersprachen bei 0 zu zählen. Das erste Element ist also das
+Element an der Stelle <code>0</code>.</p>
+<h2 id="länge-von-listen">Länge von Listen</h2>
+<p>Listen haben immer eine Länge. Dies ist die Anzahl an Elementen in
+der Liste, man erhält diese mit <code>.length</code>. Möchten Sie also
+auf das letzte Element von einer Liste zugreifen, dann können Sie das
+mit dem folgenden Code machen. Es ist nützlich sic dieses Muster zu
+merken, da es erstaunlich oft auftritt.</p>
+<section id="zugriff-auf-das-letzte-element" class="example">
+<h3>Zugriff auf das letzte Element</h3>
+<p>Wir erweitern das Beispiel von oben, und greifen auf das erste und
+letzte Element der Liste zu.</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">example_primes</span>() {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Liste der Primzahlen</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    primes <span class="op">=</span> [<span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">5</span><span class="op">,</span> <span class="dv">7</span><span class="op">,</span> <span class="dv">11</span><span class="op">,</span> <span class="dv">13</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">19</span>]</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Erstes Element</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>( primes[<span class="dv">0</span>] )</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Letztes Element</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>( primes[ primes<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span> ] )</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</section>
+<h2 id="auf-alle-elemente-einer-liste-zugreifen">Auf alle Elemente einer
+Liste zugreifen</h2>
+<p>Meistens wenn wir eine Liste haben, möchten wir etwas mit allen
+Elementen der Liste machen, nicht nur mit einem. Wenn Sie auf alle
+Elemente einer Liste zugreifen möchten, sagt man über eine Liste
+iterieren. Auch dies ist ein Muster welches Sie sich unbedingt merken
+sollen.</p>
+<section id="zugriff-auf-alle-elemente-einer-liste" class="example">
+<h3>Zugriff auf alle Elemente einer Liste</h3>
+<p>Wir erweitern das Beispiel von oben noch weiter und iterieren über
+die gesamte Liste.</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">example_primes</span>() {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Liste der Primzahlen</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    primes <span class="op">=</span> [<span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">5</span><span class="op">,</span> <span class="dv">7</span><span class="op">,</span> <span class="dv">11</span><span class="op">,</span> <span class="dv">13</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">19</span>]</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> primes<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>( primes[i] )</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Dieses Muster kommt in der Informatik so oft vor, das müssen Sie
+einfach auswendig können!</p>
+</section>
+<p>Es gibt in der Informatik nicht viele Dinge die man auswendig können
+muss. Man kann in der Regel alles nachschauen oder durch überlegen
+rekonstruieren. Sie gewinnen aber sehr viel Zeit wenn Sie das Muster von
+oben auswendig lernen, da es so oft vor kommt. Sie sollten das Muster
+aber auch verstehen, denn oftmals gibt es kleine Änderungen.</p>
+<section id="code-analysieren-und-verstehen" class="exercise">
+<h3>Code analysieren und verstehen</h3>
+<p>Schauen Sie sich das letzte Beispiel nochmals genau an. Repetieren
+Sie gleich nochmals wie die <code>for</code>-Schleife funktioniert.
+Machen Sie sich klar was das <code>primes[i]</code> genau macht.</p>
+</section>
+<h2 id="mehr-aufgaben">Mehr Aufgaben</h2>
+<p>Lösen Sie die folgenden Aufgaben.</p>
+<section id="aufgabe-7" class="exercise">
+<h3>Aufgabe 7</h3>
+<p>Kopieren Sie das Beispiel zu den Primzahlen. Geben Sie alle
+Primzahlen von der zweiten bis zur zweitletzen aus. Sie dürfen die Liste
+selbst nicht verändern.</p>
+</section>
+<section id="aufgabe-8" class="exercise">
+<h3>Aufgabe 8</h3>
+<p>Kopieren Sie das Beispiel zu den Primzahlen. Geben Sie jede zweite
+Primzahl aus. Sie dürfen die Liste dafür nicht verändern.</p>
+</section>
+<section id="aufgabe-9" class="exercise">
+<h3>Aufgabe 9</h3>
+<p>Kopieren Sie das Beispiel zu den Primzahlen. Geben Sie die Primzahlen
+in umgekehrter Reihenfolge zurück. Sie dürfen die Liste dafür nicht
+verändern.</p>
+</section>
+<section id="aufgabe-10" class="exercise">
+<h3>Aufgabe 10</h3>
+<p>Kopieren Sie das Beispiel zu den Primzahlen. Berechnen Sie die Summe
+aller Primzahlen in der Liste.</p>
+</section>
+<h2 id="zeichenketten-und-listen">Zeichenketten und Listen</h2>
+<p>Zeichenketten (oder auf Englisch <strong>Strings</strong>) sind eine
+fundamentale Datenstruktur in der Informatik. Sie werden verwendet um
+mit Text zu arbeiten. In früheren Programmiersprachen gab es keine
+direkten Zeichenketten, sondern nur Listen von Zeichen. Damit zu
+arbeiten ist sehr aufwendig und anstrengend, es gibt aber die nötig
+Denkwerkzeuge um mit Zeichenketten zu hantieren. In Javascript
+verschwimmt die Grenze zwischen Zeichenkette und Liste von Zeichen sehr
+stark. Deshalb ist es für uns ganz wichtig uns klar zu machen womit wir
+arbeiten.</p>
+<h2 id="unterschied-zeichenkette-und-liste-von-zeichen">Unterschied
+Zeichenkette und Liste von Zeichen</h2>
+<p>Ihnen mag nicht ganz klar sein weshalb man hier einen Unterschied
+macht, und es ist auch nicht ganz einfach diesen zu erklären. Am
+einfachsten können Sie es sich so merken: Müssen Sie einzelne Zeichen
+ändern, brauchen Sie eine <strong>Liste</strong>. Müssen Sie Zeichen nur
+lesen, dann reicht eine Zeichenkette.</p>
+<section id="zeichenkette-zu-liste" class="example">
+<h3>Zeichenkette zu Liste</h3>
+<p>Der folgende Code liest eine Zeichenkette. Wir möchten den Buchsten
+an der zweiten Stelle ändern und das Resultat ausgeben.</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">example_string_to_list</span>() {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Erstelle eine neue Zeichenkette</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> greeting <span class="op">=</span> <span class="st">&quot;Hallo&quot;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Ändere das zweite Zeichen auf &quot;e&quot;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    greeting[<span class="dv">1</span>] <span class="op">=</span> <span class="st">&quot;e&quot;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(greeting) <span class="co">// gib die Zeichenkette aus</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Erzeuge eine Liste aus der Zeichenkette</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> greetingList <span class="op">=</span> greeting<span class="op">.</span><span class="fu">split</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Ändere das zweite Zeichen auf &quot;e&quot;</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    greetingList[<span class="dv">1</span>] <span class="op">=</span> <span class="st">&quot;e&quot;</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Setze die Liste zu einer Zeichenkette zusammen</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    greeting <span class="op">=</span> greetingList<span class="op">.</span><span class="fu">join</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(greeting) <span class="co">// gib die Zeichenkette aus</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Sie sehen das bei ersten mal das <code>a</code> nicht durch ein
+<code>e</code> ersetzt wurde, beim zweiten mal aber schon. Es ist ein
+wenig iritierens das der Computer das erste zulässt, aber keine Änderung
+vornimmt. Das liegt einfach daran wie Javascript funktioniert. Wenn Sie
+Zeichen ändern möchten, dann arbeiten Sie immer mit Listen.</p>
+</section>
+<h2 id="die-funktionen-split-und-join">Die Funktionen <code>split</code>
+und <code>join</code></h2>
+<p>Diese beiden Funktionen sind sehr nützliche Helfer. Sie ermöglichen
+es ganz einfach von Zeichenketten zu Listen zu konvertieren und
+umgekehrt. Diese beiden Funktionen können noch sehr viel mehr, aber für
+unsere Zwecke müssen Sie einfach mal dieses Verhalten auswendig
+lernen.</p>
+<h2 id="eine-neue-zeichenkette-erstellen">Eine neue Zeichenkette
+erstellen</h2>
+<p>Wenn Sie eine neue Zeichnkette erstellen möchten, und Sie möchten
+diese aus einer anderen aufbauen, dann können Sie das mit einer neuen
+Liste machen. Das folgende Codestück zeigt wie man das erreicht.</p>
+<div class="example">
+<p>Wir möchten eine Zeichenkette lesen und diese Zeichen für Zeichen in
+eine neue Liste anfügen.</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">example_list_creation</span>() {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> orig <span class="op">=</span> <span class="st">&quot;Hallo&quot;</span> <span class="co">// ursprüngliche Zeichenkette</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> res <span class="op">=</span> [] <span class="co">// Neue leere Liste. Hier hängen wir die Zeichen von orig an.</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Über jedes Zeichen von orig iterieren</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ( <span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> orig<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span> ) {</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>        res<span class="op">.</span><span class="fu">push</span>( orig[i] ) <span class="co">// Zeichen am Ende anhängen</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Liste in Zeichenkette umwandeln</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> res<span class="op">.</span><span class="fu">join</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(res)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Das Beispiel scheint recht unnötig zu sein, da es eine komplizierte
+Art ist eine Zeichenkette zu kopieren. Es steckt jedoch sehr viel
+Flexibilität in dem Ansatz, da man Zeichen zum Beispiel nur unter
+bestimmten Bedingungen zur Zeichenkette hinzufügen kann, oder eine
+andere Version des Zeichens verwenden kann. Sie können Zeichen auch
+doppelt einfügen mit diesem Ansatz. Das werden Sie später bei den
+Aufgaben noch brauchen.</p>
+</div>
+<h2 id="noch-mehr-aufgaben">Noch mehr Aufgaben</h2>
+<p>Hier sind noch mehr Aufgaben an denen Sie üben können. Sie müssen
+nicht alle Aufgaben lösen und Sie müssen die Reihenfolge auch nicht
+beachten. Bevor Sie die Aufgaben lösen, schauen Sie sich alle einmal an
+und treffen Sie dann eine Auswahl. Erstellen Sie pro Aufgabe mindestens
+einen neuen Commit.</p>
+<section id="aufgabe-11" class="exercise">
+<h3>Aufgabe 11</h3>
+<p>Schreiben Sie ein Programm das Ihren Namen als Liste von Zeichen
+ausgibt.</p>
+</section>
+<section id="aufgabe-12" class="exercise">
+<h3>Aufgabe 12</h3>
+<p>Schreiben Sie ein Programm das überprüft ob in einer Eingabe das
+Zeichen <code>'x'</code> vorkommt.</p>
+</section>
+<section id="aufgabe-13" class="exercise">
+<h3>Aufgabe 13</h3>
+<p>Schreiben Sie ein Programm welches überprüft ob die Eingabe kürzer
+wie 12 Zeichen ist, und länger wie 0.</p>
+</section>
+<section id="aufgabe-14" class="exercise">
+<h3>Aufgabe 14</h3>
+<p>Schreiben Sie ein Programm das jedes Zeichen in der Eingabe
+verdoppelt.</p>
+</section>
+<section id="aufgabe-15" class="exercise">
+<h3>Aufgabe 15</h3>
+<p>Schreiben Sie ein Programm das zählt wie viele Leerzeichen in Ihrer
+Eingabe vorkommen.</p>
+</section>
+<section id="aufgabe-16" class="exercise">
+<h3>Aufgabe 16</h3>
+<p>Schreiben Sie ein Programm das alle Leerzeichen in der Eingabe mit
+dem Zeichen <code>_</code> ersetzt.</p>
+</section>
+<section id="aufgabe-17" class="exercise">
+<h3>Aufgabe 17</h3>
+<p>Schreiben Sie ein Programm welches überprüft ob nach jedem
+<code>.</code> in der Eingabe ein Leerzeichen kommt.</p>
+</section>
+<section id="aufgabe-18" class="exercise">
+<h3>Aufgabe 18</h3>
+<p>Schreiben Sie ein Programm welches die Eingabe umkehrt.</p>
+</section>
+<section id="aufgabe-19" class="exercise">
+<h3>Aufgabe 19</h3>
+<p>Schreiben Sie ein Programm das die Eingabe auf ein <em>Palindrom</em>
+überprüft.</p>
+<p><strong>Hinweis</strong>: Ein <em>Palindrom</em> ist eine
+Zeichenkette die vorwärts und rückwärts gelesen das gleiche ergibt.</p>
+</section>
+<section id="aufgabe-20" class="exercise">
+<h3>Aufgabe 20</h3>
+<p>Ersetzen Sie alle Zeichen der Eingabe mit der Grossbuchstabenversion
+der Zeichens.</p>
+<p><strong>Hinweis:</strong> Mit der Funktion
+<code>.toUpperCase()</code> können Sie die Grosbuchstabenversion eines
+Zeichens erhalten.</p>
+</section>
+<section id="aufgabe-21" class="exercise">
+<h3>Aufgabe 21</h3>
+<p>Ersetzen Sie alle Zeichen der Eingabe mit der Kleinbuchstabenversion
+der Zeichens.</p>
+</section>
+<section id="aufgabe-22" class="exercise">
+<h3>Aufgabe 22</h3>
+<p>Ersetzen Sie alle Zeichen der Eingabe mit einem <code>$</code> bis
+Sie ein <code>k</code> lesen.</p>
+</section>
+<section id="aufgabe-23" class="exercise">
+<h3>Aufgabe 23</h3>
+<p>Ersetzen Sie alle Zeichen der Eingabe mit Grossbuchstaben, bis Sie
+einen Grossbuchstaben lesen.</p>
+</section>
+<section id="aufgabe-24" class="exercise">
+<h3>Aufgabe 24</h3>
+<p>Hängen Sie den ersten Buchstaben der Eingabe vorne und hinten an die
+Zeichenkette an.</p>
+</section>
+<section id="aufgabe-25" class="exercise">
+<h3>Aufgabe 25</h3>
+<p>Hängen Sie die ersten 3 Buchstaben der Eingabe vorne und hinten an
+die Zeichenkette an. Überprüfen Sie dass die Zeichenkette mindestens 3
+Zeichen enthält.</p>
+</section>
+<section id="aufgabe-26" class="exercise">
+<h3>Aufgabe 26</h3>
+<p>Vertauschen Sie das erste und das letzte Zeichen einer
+Zeichenkette.</p>
+</section>
+<section id="aufgabe-27" class="exercise">
+<h3>Aufgabe 27</h3>
+<p>Vertauschen Sie das erste und das letzte Zeichen einer Zeichenkette.
+Dann das zweite und das zweitletzte und so weiter, bis Sie in der Mitte
+angekommen sind.</p>
+</section>
+<section id="aufgabe-28" class="exercise">
+<h3>Aufgabe 28</h3>
+<p>Löschen Sie das Zeichen in der Mitte der Eingabe, wenn die Eingabe
+grösser als 10 oder ungerade ist.</p>
+</section>
+<section id="aufgabe-29" class="exercise">
+<h3>Aufgabe 29</h3>
+<p>Löschen Sie Zeichen aus der Mitte der Zeichenkette, bis 2 gleiche
+Zeichen in der Mitte stehen.</p>
+<p><strong>Hinweis:</strong> Verwenden Sie eine
+<code>while</code>-Schleife.</p>
+</section>
 </body>
 </html>
