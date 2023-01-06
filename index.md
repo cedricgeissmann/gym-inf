@@ -9,3 +9,4 @@ title: Informatik
 1. [Vektorgrafiken mit SVG](05-SVG.html)
 1. [Bedingungen, Schleifen und Listen](06-logic.html)
 2. [Mergekonflikte](07-merge-conflicts.html)
+2. [Klassen und Objekte](08-objects.html)
