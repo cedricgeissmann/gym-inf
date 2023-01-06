@@ -76,4 +76,94 @@ leicht andere Werte haben, aber alle dem gleichen Bauplan folgen. Genau dafür
 sind Objekte gemacht.
 
 Mehrere Objekte können genau so wie im Beispiel oben erzeugt werden, müssen
-aber jeweils in einer eigenen Variable gespeichert werden.
+aber jeweils in einer eigenen Variable gespeichert werden. Da unsere Spieler
+aber noch nicht interagieren können, bringt es uns nicht viel mehrere Spieler
+zu erstellen. Fügen wir doch zuerst noch mehr Funktionalität zu der
+Spielerklasse hinzu.
+
+::: {.example}
+### Spieler angreifen
+
+Wir möchten gerne das ein Spieler einen anderen Spieler angreifen kann. Dafür
+erweitern wir die Klasse Spieler von oben wie folgt:
+
+```javascript
+class Player {
+    constructor() {
+        this.hp = 100
+        this.armor = 2
+        this.dmg = 5
+    }
+    
+    showStatus() {
+        console.log(`Spieler hat ${this.hp} HP.`)
+    }
+    
+    attack(targetPlayer) {
+        targetPlayer.takeDamage(this.dmg)
+    }
+    
+    takeDamage(dmg) {
+        let dmgCalculated = (dmg - this.armor)
+        if (dmgCalculated < 1) { dmgCalculated = 1 } 
+        this.hp = this.hp - dmgCalculated
+    }
+}
+```
+
+Es sind hier 2 neue Methoden hinzugekommen. Die Methode `attack` sagt das ein
+bestimmter Spieler einen anderen bestimmten Spieler angreifen soll. Wir müssen
+also das Ziel an den angreifenden Spieler übergeben. Das sehen wir später wie
+wir das im Code machen. Die Methode selbst sagt dann einfach das dem Ziel so
+viel Schaden gemacht wird, wie der angreifende Spieler Schaden verursacht.
+Dadurch können wir dann solche Dinge wie Immunität oder Schadenreduzierung bei
+einem Spieler implementieren. Das ist ein weiterer Vorteil von Objekten, wir
+können auf einem höheren Level beschreiben was einem Objekt passieren soll, und
+das Objekt selbst kümmert sich um die Umsetzung. Schauen wir uns dafür gleich
+die Methode `takeDamage(dmg)` an.
+
+Diese Methode sagt das einem Spieler ein bestimmter Schaden zugefügt werden
+soll. Je nach Logik die unser Spiel hat, soll der Schaden aber noch reduziert
+oder verstärkt werden. Hier haben wir eine sehr einfache Implementierung
+verwendet. Wir reduzieren den Schaden einfach um die Rüstung die ein Spieler
+hat. Aber nicht weniger wie 1. Damit ist es bereits möglich unterschiedliche
+Spieler zu haben. Beispielsweise könnte ein Spieler sehr viel Schaden
+verursachen, aber fast keine Rüstung haben, oder ein anderer Spieler hat sehr
+viel Rüstung, nimmt aber keinen Schaden. Beide Objekte folgen aber dem gleichen
+Bauplan.
+
+:::
+
+## Objekte interagieren lassen
+
+Wenn wir möchten das Objekte interagieren können, dann müssen wir auch mehrere
+Objekte erstellen. Das werden wir in dem folgenden Beispiel gleich machen.
+
+::: {.example}
+### Kampf simulieren
+
+Wie erstellen 2 Spieler die sich gegenseitig angreifen werden.
+
+```javascript
+const p1 = new Player()
+const p2 = new Player()
+
+p1.showStatus()
+p2.showStatus()
+
+p1.attack(p1)
+
+p1.showStatus()
+p2.showStatus()
+```
+
+In unserem Beispiel hat der Spieler `p1` den Spieler `p2` angegriffen, welcher
+nun weniger Lebenspunkte wie der Spieler `p1` hat.
+:::
+
+## Unterschiedliche Werte für Objekte
+
+In dem Beispiel oben können wir sehen das beide Spieler die genau gleichen
+Werte haben. Es ist auch schwer im Status die Spieler auseinander zu halten, da
+sie beide keinen Namen haben. Verschiedene Werte können über die Konstruktoren
+an die Objekte übergeben werden.
