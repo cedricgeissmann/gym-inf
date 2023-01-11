@@ -93,14 +93,16 @@ class Player {
         this.hp = 100
         this.armor = 2
         this.dmg = 5
+        
+        this.target = null
     }
     
     showStatus() {
         console.log(`Spieler hat ${this.hp} HP.`)
     }
     
-    attack(targetPlayer) {
-        targetPlayer.takeDamage(this.dmg)
+    attack() {
+        this.target.takeDamage(this.dmg)
     }
     
     takeDamage(dmg) {
@@ -112,8 +114,7 @@ class Player {
 ```
 
 Es sind hier 2 neue Methoden hinzugekommen. Die Methode `attack` sagt das ein
-bestimmter Spieler einen anderen bestimmten Spieler angreifen soll. Wir müssen
-also das Ziel an den angreifenden Spieler übergeben. Das sehen wir später wie
+bestimmter Spieler sein Ziel angreifen soll. Das sehen wir später wie
 wir das im Code machen. Die Methode selbst sagt dann einfach das dem Ziel so
 viel Schaden gemacht wird, wie der angreifende Spieler Schaden verursacht.
 Dadurch können wir dann solche Dinge wie Immunität oder Schadenreduzierung bei
@@ -142,7 +143,7 @@ Objekte erstellen. Das werden wir in dem folgenden Beispiel gleich machen.
 ::: {.example}
 ### Kampf simulieren
 
-Wie erstellen 2 Spieler die sich gegenseitig angreifen werden.
+Wir erstellen 2 Spieler die sich gegenseitig angreifen werden.
 
 ```javascript
 const p1 = new Player()
@@ -150,8 +151,9 @@ const p2 = new Player()
 
 p1.showStatus()
 p2.showStatus()
+p1.target = p2
 
-p1.attack(p1)
+p1.attack()
 
 p1.showStatus()
 p2.showStatus()
@@ -167,3 +169,51 @@ In dem Beispiel oben können wir sehen das beide Spieler die genau gleichen
 Werte haben. Es ist auch schwer im Status die Spieler auseinander zu halten, da
 sie beide keinen Namen haben. Verschiedene Werte können über die Konstruktoren
 an die Objekte übergeben werden.
+
+
+::: {.example}
+### Werte im Konstruktor übergeben
+
+Wir möchten in dem Beispiel 2 unterschiedliche Spieler erzeugen. Das machen wir
+indem wir dem Objekt bei der Erzeugung verschiedene Werte übergeben. Das
+funktioniert wie beim aufrufen einer Funktion.
+
+```javascript
+class Player {
+    constructor(id, name) {
+        this.hp = 100
+        this.armor = 2
+        this.dmg = 5
+        
+        this.target = null
+        
+        this.id = id
+        this.name = name
+    }
+    
+    showStatus() {
+        console.log(`Spieler hat ${this.hp} HP.`)
+    }
+    
+    attack() {
+        this.target.takeDamage(this.dmg)
+    }
+    
+    takeDamage(dmg) {
+        let dmgCalculated = (dmg - this.armor)
+        if (dmgCalculated < 1) { dmgCalculated = 1 } 
+        this.hp = this.hp - dmgCalculated
+    }
+}
+```
+
+Nun können wir einem Spieler wie folgt erstellen.
+
+```javascript
+const p1 = new Player("#player", "Spieler")
+```
+
+Es können im gleichen Schema auch andere Werte übergeben werden. Wichtig ist
+nur das die Werte die dann zum Objekt gehören, auch in dem Objekt mit `this.`
+gespeichert werden.
+:::

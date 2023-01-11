@@ -165,34 +165,34 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">hp</span> <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">armor</span> <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">dmg</span> <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">showStatus</span>() {</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Spieler hat </span><span class="sc">${</span><span class="kw">this</span><span class="op">.</span><span class="at">hp</span><span class="sc">}</span><span class="vs"> HP.`</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">attack</span>(targetPlayer) {</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        targetPlayer<span class="op">.</span><span class="fu">takeDamage</span>(<span class="kw">this</span><span class="op">.</span><span class="at">dmg</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">takeDamage</span>(dmg) {</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> dmgCalculated <span class="op">=</span> (dmg <span class="op">-</span> <span class="kw">this</span><span class="op">.</span><span class="at">armor</span>)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (dmgCalculated <span class="op">&lt;</span> <span class="dv">1</span>) { dmgCalculated <span class="op">=</span> <span class="dv">1</span> } </span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">hp</span> <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">hp</span> <span class="op">-</span> dmgCalculated</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">target</span> <span class="op">=</span> <span class="kw">null</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">showStatus</span>() {</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Spieler hat </span><span class="sc">${</span><span class="kw">this</span><span class="op">.</span><span class="at">hp</span><span class="sc">}</span><span class="vs"> HP.`</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">attack</span>() {</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="fu">takeDamage</span>(<span class="kw">this</span><span class="op">.</span><span class="at">dmg</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">takeDamage</span>(dmg) {</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> dmgCalculated <span class="op">=</span> (dmg <span class="op">-</span> <span class="kw">this</span><span class="op">.</span><span class="at">armor</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (dmgCalculated <span class="op">&lt;</span> <span class="dv">1</span>) { dmgCalculated <span class="op">=</span> <span class="dv">1</span> } </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">hp</span> <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">hp</span> <span class="op">-</span> dmgCalculated</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Es sind hier 2 neue Methoden hinzugekommen. Die Methode
-<code>attack</code> sagt das ein bestimmter Spieler einen anderen
-bestimmten Spieler angreifen soll. Wir müssen also das Ziel an den
-angreifenden Spieler übergeben. Das sehen wir später wie wir das im Code
-machen. Die Methode selbst sagt dann einfach das dem Ziel so viel
-Schaden gemacht wird, wie der angreifende Spieler Schaden verursacht.
-Dadurch können wir dann solche Dinge wie Immunität oder
-Schadenreduzierung bei einem Spieler implementieren. Das ist ein
-weiterer Vorteil von Objekten, wir können auf einem höheren Level
-beschreiben was einem Objekt passieren soll, und das Objekt selbst
-kümmert sich um die Umsetzung. Schauen wir uns dafür gleich die Methode
-<code>takeDamage(dmg)</code> an.</p>
+<code>attack</code> sagt das ein bestimmter Spieler sein Ziel angreifen
+soll. Das sehen wir später wie wir das im Code machen. Die Methode
+selbst sagt dann einfach das dem Ziel so viel Schaden gemacht wird, wie
+der angreifende Spieler Schaden verursacht. Dadurch können wir dann
+solche Dinge wie Immunität oder Schadenreduzierung bei einem Spieler
+implementieren. Das ist ein weiterer Vorteil von Objekten, wir können
+auf einem höheren Level beschreiben was einem Objekt passieren soll, und
+das Objekt selbst kümmert sich um die Umsetzung. Schauen wir uns dafür
+gleich die Methode <code>takeDamage(dmg)</code> an.</p>
 <p>Diese Methode sagt das einem Spieler ein bestimmter Schaden zugefügt
 werden soll. Je nach Logik die unser Spiel hat, soll der Schaden aber
 noch reduziert oder verstärkt werden. Hier haben wir eine sehr einfache
@@ -209,18 +209,19 @@ auch mehrere Objekte erstellen. Das werden wir in dem folgenden Beispiel
 gleich machen.</p>
 <section id="kampf-simulieren" class="example">
 <h3>Kampf simulieren</h3>
-<p>Wie erstellen 2 Spieler die sich gegenseitig angreifen werden.</p>
+<p>Wir erstellen 2 Spieler die sich gegenseitig angreifen werden.</p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> p1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Player</span>()</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> p2 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Player</span>()</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>p1<span class="op">.</span><span class="fu">showStatus</span>()</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>p2<span class="op">.</span><span class="fu">showStatus</span>()</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>p1<span class="op">.</span><span class="fu">attack</span>(p1)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>p1<span class="op">.</span><span class="fu">showStatus</span>()</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>p2<span class="op">.</span><span class="fu">showStatus</span>()</span></code></pre></div>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>p1<span class="op">.</span><span class="at">target</span> <span class="op">=</span> p2</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>p1<span class="op">.</span><span class="fu">attack</span>()</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>p1<span class="op">.</span><span class="fu">showStatus</span>()</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>p2<span class="op">.</span><span class="fu">showStatus</span>()</span></code></pre></div>
 <p>In unserem Beispiel hat der Spieler <code>p1</code> den Spieler
 <code>p2</code> angegriffen, welcher nun weniger Lebenspunkte wie der
 Spieler <code>p1</code> hat.</p>
@@ -231,5 +232,44 @@ Objekte</h2>
 gleichen Werte haben. Es ist auch schwer im Status die Spieler
 auseinander zu halten, da sie beide keinen Namen haben. Verschiedene
 Werte können über die Konstruktoren an die Objekte übergeben werden.</p>
+<section id="werte-im-konstruktor-übergeben" class="example">
+<h3>Werte im Konstruktor übergeben</h3>
+<p>Wir möchten in dem Beispiel 2 unterschiedliche Spieler erzeugen. Das
+machen wir indem wir dem Objekt bei der Erzeugung verschiedene Werte
+übergeben. Das funktioniert wie beim aufrufen einer Funktion.</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Player {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">constructor</span>(id<span class="op">,</span> name) {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">hp</span> <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">armor</span> <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">dmg</span> <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">target</span> <span class="op">=</span> <span class="kw">null</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">id</span> <span class="op">=</span> id</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">name</span> <span class="op">=</span> name</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">showStatus</span>() {</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Spieler hat </span><span class="sc">${</span><span class="kw">this</span><span class="op">.</span><span class="at">hp</span><span class="sc">}</span><span class="vs"> HP.`</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">attack</span>() {</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="fu">takeDamage</span>(<span class="kw">this</span><span class="op">.</span><span class="at">dmg</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">takeDamage</span>(dmg) {</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> dmgCalculated <span class="op">=</span> (dmg <span class="op">-</span> <span class="kw">this</span><span class="op">.</span><span class="at">armor</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (dmgCalculated <span class="op">&lt;</span> <span class="dv">1</span>) { dmgCalculated <span class="op">=</span> <span class="dv">1</span> } </span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">hp</span> <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">hp</span> <span class="op">-</span> dmgCalculated</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Nun können wir einem Spieler wie folgt erstellen.</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> p1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Player</span>(<span class="st">&quot;#player&quot;</span><span class="op">,</span> <span class="st">&quot;Spieler&quot;</span>)</span></code></pre></div>
+<p>Es können im gleichen Schema auch andere Werte übergeben werden.
+Wichtig ist nur das die Werte die dann zum Objekt gehören, auch in dem
+Objekt mit <code>this.</code> gespeichert werden.</p>
+</section>
 </body>
 </html>
